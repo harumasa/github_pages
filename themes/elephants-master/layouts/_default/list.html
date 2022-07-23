@@ -3,16 +3,17 @@
 <section id="content">
   <ul>
     <div id="posts">
-      {{ range .Pages.ByPublishDate.Reverse }}
-        <div class="post-container">
+{{ range .Pages.ByPublishDate.Reverse }}
+      <div class="post-container">
  	      <div class="date-time-title date-time-font">
-		    <time>{{ .Date.Format (.Site.Params.datefrom | default "Jan 02 2006") }}</time>
-          </div>
-          <div class="date-time-title post">
-		    <a href="{{ .Permalink }}">{{ .Title }}</a>
-		  </div>
+		      <time>{{ .Date.Format (.Site.Params.datefrom | default "Jan 02 2006") }}</time>
+          <time>(Lastmod: {{ .Lastmod.Format (.Site.Params.dateform | default "Jan 02 2006") }})</time>
         </div>
-      {{ end }}
-	</div>
+        <div class="date-time-title post">
+		      <a href="{{ .Permalink }}">{{ .Title }}</a>
+		    </div>
+      </div>
+{{ end }}
+	  </div>
   </ul>
 </section>

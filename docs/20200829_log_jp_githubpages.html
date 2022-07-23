@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Hugo &#43; GitHub Pages でブログを作成する - harumasa.txt</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Hugo &#43; GitHub Pages でブログを作成する" />
+<meta property="og:description" content="はじめに Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Catalina 10.15.6 Hugo 0.74.3 ターミナルから以下の手順でブログ記事を更新し GitHub Pages への公開までをシェルスクリプトで自動化します。
+# Hugo によって生成されたプロジェクトのルートディレクトリまで移動します。 cd ~/github_pages # 新規マークダウンファイルを作成し編集します。 hugo new github_pages.md # シェルスクリプトを実行します。 ./deploy.sh Hugo の設定 1. インストール Hugo をインストールします。
+brew install hugo Hugo プロジェクトを作成します。
+hugo new site github_pages 2. テーマのダウンロード 公式サイト Hugo の Hugo テーマ一覧 からテーマを選び git clone します。
+cd ~/github_pages git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen 3. 記事の作成 github_pages.md を作成します。
+cd ~/github_pages/content hugo new github_pages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2020-08-29T00:00:00+09:00" />
+<meta property="article:modified_time" content="2020-08-29T00:00:00+09:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo &#43; GitHub Pages でブログを作成する"/>
+<meta name="twitter:description" content="はじめに Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Catalina 10.15.6 Hugo 0.74.3 ターミナルから以下の手順でブログ記事を更新し GitHub Pages への公開までをシェルスクリプトで自動化します。
+# Hugo によって生成されたプロジェクトのルートディレクトリまで移動します。 cd ~/github_pages # 新規マークダウンファイルを作成し編集します。 hugo new github_pages.md # シェルスクリプトを実行します。 ./deploy.sh Hugo の設定 1. インストール Hugo をインストールします。
+brew install hugo Hugo プロジェクトを作成します。
+hugo new site github_pages 2. テーマのダウンロード 公式サイト Hugo の Hugo テーマ一覧 からテーマを選び git clone します。
+cd ~/github_pages git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen 3. 記事の作成 github_pages.md を作成します。
+cd ~/github_pages/content hugo new github_pages."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html" /><link rel="prev" href="https://harumasa.github.io/github_pages/20200829_log_en_setup_for_mac.html" /><link rel="next" href="https://harumasa.github.io/github_pages/20200829_log_en_install_archlinux.html" /><link rel="stylesheet" href="/github_pages/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo + GitHub Pages でブログを作成する",
+        "inLanguage": "ja",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/harumasa.github.io\/github_pages\/20200829_log_jp_githubpages.html"
+        },"genre": "page","wordcount":  277 ,
+        "url": "https:\/\/harumasa.github.io\/github_pages\/20200829_log_jp_githubpages.html","datePublished": "2020-08-29T00:00:00+09:00","dateModified": "2020-08-29T00:00:00+09:00","license": "harumasa All rights reserved.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/github_pages/" title="harumasa.txt">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/github_pages/" title="harumasa.txt">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Hugo &#43; GitHub Pages でブログを作成する</h1><div class="content" id="content"><h2 id="はじめに">はじめに</h2>
+<ul>
+<li>Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)</li>
+<li>OS: macOS Catalina 10.15.6</li>
+<li>Hugo 0.74.3</li>
+</ul>
+<p>ターミナルから以下の手順でブログ記事を更新し GitHub Pages への公開までをシェルスクリプトで自動化します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># Hugo によって生成されたプロジェクトのルートディレクトリまで移動します。</span>
+</span></span><span style="display:flex;"><span>cd ~/github_pages
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 新規マークダウンファイルを作成し編集します。</span>
+</span></span><span style="display:flex;"><span>hugo new github_pages.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># シェルスクリプトを実行します。</span>
+</span></span><span style="display:flex;"><span>./deploy.sh
+</span></span></code></pre></div><h2 id="hugo-の設定">Hugo の設定</h2>
+<h3 id="1-インストール">1. インストール</h3>
+<p>Hugo をインストールします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p>Hugo プロジェクトを作成します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>hugo new site github_pages
+</span></span></code></pre></div><h3 id="2-テーマのダウンロード">2. テーマのダウンロード</h3>
+<p>公式サイト <a href="https://gohugo.io/" title="Hugo" target="_blank" rel="noopener noreffer ">Hugo</a> の <a href="https://themes.gohugo.io/" title="Hugo テーマ一覧" target="_blank" rel="noopener noreffer ">Hugo テーマ一覧</a> からテーマを選び <code>git clone</code> します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/github_pages
+</span></span><span style="display:flex;"><span>git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen
+</span></span></code></pre></div><h3 id="3-記事の作成">3. 記事の作成</h3>
+<p><code>github_pages.md</code> を作成します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/github_pages/content
+</span></span><span style="display:flex;"><span>hugo new github_pages.md
+</span></span></code></pre></div><p><code>github_pages.md</code> を編集します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/github_pages/content/github_pages.md
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md:github_pages.md" data-lang="md:github_pages.md"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;TITLE&#34;
+</span></span><span style="display:flex;"><span>date: 2020-01-01T00:00:00+09:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## XXXXXXXX
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>+++
+</span></span></code></pre></div><h3 id="4-設定ファイルの編集">4. 設定ファイルの編集</h3>
+<p><code>config.toml</code> を編集します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/github_pages/config.toml
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml:config.toml" data-lang="toml:config.toml"><span style="display:flex;"><span><span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;${AUTHOR}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://${USERNAME}.github.io/github_pages/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#34;${USERNAME} All rights reserved.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;ja&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#34;docs&#34;</span> <span style="color:#75715e"># html 生成先を public から docs へ変更</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-zen&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;${TITLE}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">uglyurls</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">github</span> = <span style="color:#e6db74">&#34;https://github.com/${USERNAME}/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">logo</span> = <span style="color:#e6db74">&#34;./images/logo.jpg&#34;</span> <span style="color:#75715e"># ~/github_pages/themes/hugo-zen/static/images/logo.jpg</span>
+</span></span></code></pre></div><h3 id="5-公開用ファイルの作成">5. 公開用ファイルの作成</h3>
+<p>以下を実行するとブラウザで <code>localhost:1313/github_pages</code> からプレビューを確認することができます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>hugo server --theme<span style="color:#f92672">=</span>hugo-zen --buildDrafts --watch
+</span></span></code></pre></div><ul>
+<li><code>--theme</code>: プレビュー時にテーマを指定します</li>
+<li><code>--buildDrafts</code>: <code>draft: true</code> となっている下書き状態のファイルもプレビューに表示します</li>
+<li><code>--watch</code>: <code>.md</code> ファイルを更新する度にブラウザ側のプレビューも自動で更新されます</li>
+</ul>
+<p>以下を実行すると <code>~/github_pages/docs</code> に公開用ファイルが作成されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><h2 id="github-pages-の設定">GitHub Pages の設定</h2>
+<h3 id="1-リポジトリの作成">1. リポジトリの作成</h3>
+<p>GitHub 上で公開用リポジトリ <code>github_pages</code> を作成します。</p>
+<p><code>docs</code> の内容が <code>https://${USERNAME}.github.io/github_pages/</code> にて公開されます。</p>
+<p>以下を実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/github_pages
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>git remote add origin git@github.com:<span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span>/github_pages.git
+</span></span><span style="display:flex;"><span>git push -u origin master
+</span></span></code></pre></div><h3 id="2-github-での設定変更">2. GitHub での設定変更</h3>
+<p>GitHub 上の <code>Settings</code> から GitHub Pages の source を <code>master branch/docs folder</code> へ変更します。</p>
+<h3 id="3-シェルスクリプトの作成">3. シェルスクリプトの作成</h3>
+<p><code>deploy.sh</code> を編集します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/github_pages/deploy.sh
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh:deploy.sh" data-lang="sh:deploy.sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>LANG<span style="color:#f92672">=</span>C
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#34;\033[0;33mDeploying updates to GitHub...\033[0m&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build the project</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add changes to git</span>
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Commit changes</span>
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;commit `date`&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Push source and build repos</span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span></code></pre></div><p>シェルスクリプトを実行できるようにします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>chmod +x deploy.sh
+</span></span></code></pre></div><p>以下を実行することでリポジトリに push され，<code>https://${USERNAME}.github.io/github_pages/</code> にてブログが表示されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>./deploy.sh
+</span></span></code></pre></div></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/github_pages/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/github_pages/js/theme.min.js"></script></body>
+</html>

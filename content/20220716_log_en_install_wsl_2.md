@@ -51,7 +51,7 @@ Append to JSON file.
 
 ## Visual Studio Code
 
-[Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code/ "Visual Studio Code")
+[Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/ "Visual Studio Code")
 
 Install Visual Studio Code from Microsoft Store
 

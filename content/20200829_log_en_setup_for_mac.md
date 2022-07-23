@@ -222,7 +222,7 @@ draft: false
 
 ## Prezto
 
-[Prezto](https://github.com/sorin-ionescu/prezto/ "Prezto") is the configuration framework for Zsh
+- [Prezto](https://github.com/sorin-ionescu/prezto/ "Prezto") is the configuration framework for Zsh
 
 Install Command Line Tools
 
@@ -292,7 +292,7 @@ Install BetterSnapTool from App Store
 
 ## Homebrew
 
-[Homebrew](https://brew.sh/ "Homebrew")
+- [Homebrew](https://brew.sh/ "Homebrew")
 
 ```zsh
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -307,7 +307,7 @@ Install BetterSnapTool from App Store
 
 ## Hyper
 
-[Hyper](https://hyper.is "Hyper")
+- [Hyper](https://hyper.is "Hyper")
 
 ### 1. Preferences
 
@@ -338,7 +338,7 @@ module.exports = {
 
 ## Visual Studio Code
 
-[Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/ "Visual Studio Code")
+- [Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/ "Visual Studio Code")
 
 ### 1. Accounts
 
@@ -368,7 +368,7 @@ Installed Extensions
 
 ## Docker Desktop
 
-[Docker](https://www.docker.com "Docker")
+- [Docker](https://www.docker.com "Docker")
 
 ### 1. Preferences
 
@@ -399,7 +399,7 @@ notebook
 
 #### 2.3. .gitignore
 
-[github/gitignore](https://github.com/github/gitignore/ "github/gitignore")
+- [github/gitignore](https://github.com/github/gitignore/ "github/gitignore")
 
 ```zsh:.gitignore
 # Python
@@ -450,7 +450,7 @@ jupyter_1  |     or http://127.0.0.1:8888/?token=XXXXXXXXXXXX
 
 ## Git
 
-[Git](https://git-scm.com "Git")
+- [Git](https://git-scm.com "Git")
 
 ### 1. Initial setting
 
@@ -477,7 +477,7 @@ Enable global gitignore
 
 ### 3. GitHub
 
-[GitHub](https://github.com/ "GitHub")
+- [GitHub](https://github.com/ "GitHub")
 
 #### 3.1. Settings
 
@@ -560,8 +560,8 @@ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
 ## Anaconda
 
-[Anaconda](https://www.anaconda.com "Anaconda")
-[Installing on macOS](https://docs.anaconda.com/anaconda/install/mac-os/ "Installing on macOS")
+- [Anaconda](https://www.anaconda.com "Anaconda")
+- [Installing on macOS](https://docs.anaconda.com/anaconda/install/mac-os/ "Installing on macOS")
 
 ### 1. PATH
 

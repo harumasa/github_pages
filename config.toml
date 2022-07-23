@@ -3,7 +3,7 @@ baseURL = "https://harumasa.github.io/github_pages/"
 copyright = "harumasa All rights reserved."
 languageCode = "ja"
 publishDir = "docs"
-theme = "elephants"
+theme = "elephants-master"
 title = "harumasa.txt"
 uglyurls = true
 

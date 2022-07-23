@@ -12,13 +12,13 @@ draft: false
 
 ## Installation guide
 
-[The official installation guide](https://wiki.archlinux.org/title/Installation_guide "The official installation guide")
+- [The official installation guide](https://wiki.archlinux.org/title/Installation_guide "The official installation guide")
 
 ### 1. Pre-installation
 
 #### 1.1 Acquire an installation image
 
-[Arch Linux Downloads](https://www.archlinux.org/download/ "Arch Linux Downloads")
+- [Arch Linux Downloads](https://www.archlinux.org/download/ "Arch Linux Downloads")
 
 #### 1.2. Verify signature
 
@@ -140,7 +140,7 @@ Create encrypted partitions
 # nano /etc/pacman.d/mirrorlist
 ```
 
-[Pacman Mirrorlist Generator](https://www.archlinux.org/mirrorlist/ "Pacman Mirrorlist Generator")
+- [Pacman Mirrorlist Generator](https://www.archlinux.org/mirrorlist/ "Pacman Mirrorlist Generator")
 
 #### 2.2. Install essential packages
 

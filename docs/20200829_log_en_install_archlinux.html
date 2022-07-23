@@ -26,10 +26,14 @@
 <li>OS: Arch Linux</li>
 </ul>
 <h2 id="installation-guide">Installation guide</h2>
-<p><a href="https://wiki.archlinux.org/title/Installation_guide" title="The official installation guide">The official installation guide</a></p>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/Installation_guide" title="The official installation guide">The official installation guide</a></li>
+</ul>
 <h3 id="1-pre-installation">1. Pre-installation</h3>
 <h4 id="11-acquire-an-installation-image">1.1 Acquire an installation image</h4>
-<p><a href="https://www.archlinux.org/download/" title="Arch Linux Downloads">Arch Linux Downloads</a></p>
+<ul>
+<li><a href="https://www.archlinux.org/download/" title="Arch Linux Downloads">Arch Linux Downloads</a></li>
+</ul>
 <h4 id="12-verify-signature">1.2. Verify signature</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig</span>
 </span></span></code></pre></div><h4 id="13-prepare-an-installation-medium">1.3. Prepare an installation medium</h4>
@@ -108,7 +112,9 @@
 </span></span></code></pre></div><h3 id="2-installation">2. Installation</h3>
 <h4 id="21-select-the-mirrors">2.1. Select the mirrors</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># nano /etc/pacman.d/mirrorlist</span>
-</span></span></code></pre></div><p><a href="https://www.archlinux.org/mirrorlist/" title="Pacman Mirrorlist Generator">Pacman Mirrorlist Generator</a></p>
+</span></span></code></pre></div><ul>
+<li><a href="https://www.archlinux.org/mirrorlist/" title="Pacman Mirrorlist Generator">Pacman Mirrorlist Generator</a></li>
+</ul>
 <h4 id="22-install-essential-packages">2.2. Install essential packages</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># pacstrap /mnt base base-devel linux linux-firmware nano</span>
 </span></span></code></pre></div><h3 id="3-configure-the-system">3. Configure the system</h3>

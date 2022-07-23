@@ -222,7 +222,7 @@ draft: false
 
 ## Prezto
 
-- [Prezto](https://github.com/sorin-ionescu/prezto/ "Prezto") is the configuration framework for Zsh
+- [Prezto](https://github.com/sorin-ionescu/prezto/ "Prezto")
 
 Install Command Line Tools
 
@@ -550,9 +550,7 @@ ssh -T git@github.com
 ssh git@github.com
 ```
 
-## etc
-
-### Reset Launchpad
+## Reset Launchpad
 
 ```zsh
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock

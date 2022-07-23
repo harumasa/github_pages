@@ -6,7 +6,8 @@
         {{ range .Site.RegularPages.ByPublishDate.Reverse }}
           <div class="post-conatiner">
             <div class="date-time-title date-time-font">
-                <time>{{ .Date.Format (.Site.Params.dateform | default "Jan 02 2006") }}</time>
+                <time>Date: {{ .Date.Format (.Site.Params.dateform | default "Jan 02 2006") }}</time>
+                <time>(Lastmod: {{ .Lastmod.Format (.Site.Params.dateform | default "Jan 02 2006") }} )</time>
             </div>
             <div class="date-time-title post">
               <a href="{{ .Permalink }}">{{ .Title }}</a>

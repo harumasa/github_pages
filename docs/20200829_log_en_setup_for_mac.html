@@ -1,71 +1,183 @@
 <!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git) - harumasa.txt</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)" />
-<meta property="og:description" content="Introduction Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Homebrew Hyper Visual Studio Code Docker Desktop Git macOS Monterey 1. System Preferences 1.1. General Click in the scroll bar to: Jump to the spot that&rsquo;s clicked Prefer tabs: Turn on Ask to keep changes when closing documents 1.2. Desktop &amp; Screen Saver 1.2.2. Screen Saver Turn off Show screen saver after 1.3. Dock &amp; Menue Bar 1." />
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Introduction # Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Homebrew Hyper Visual Studio Code Docker Desktop Git macOS Monterey # 1. System Preferences # 1.1. General # Click in the scroll bar to: Jump to the spot that&rsquo;s clicked Prefer tabs: Turn on Ask to keep changes when closing documents 1.2. Desktop &amp; Screen Saver # 1.2.2. Screen Saver # Turn off Show screen saver after 1.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)" />
+<meta property="og:description" content="Introduction # Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Homebrew Hyper Visual Studio Code Docker Desktop Git macOS Monterey # 1. System Preferences # 1.1. General # Click in the scroll bar to: Jump to the spot that&rsquo;s clicked Prefer tabs: Turn on Ask to keep changes when closing documents 1.2. Desktop &amp; Screen Saver # 1.2.2. Screen Saver # Turn off Show screen saver after 1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://harumasa.github.io/github_pages/20200829_log_en_setup_for_mac.html" /><meta property="article:section" content="" />
 <meta property="article:published_time" content="2020-08-29T00:00:00+09:00" />
-<meta property="article:modified_time" content="2020-07-20T00:00:00+09:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2020-07-20T00:00:00+09:00" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)"/>
-<meta name="twitter:description" content="Introduction Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Homebrew Hyper Visual Studio Code Docker Desktop Git macOS Monterey 1. System Preferences 1.1. General Click in the scroll bar to: Jump to the spot that&rsquo;s clicked Prefer tabs: Turn on Ask to keep changes when closing documents 1.2. Desktop &amp; Screen Saver 1.2.2. Screen Saver Turn off Show screen saver after 1.3. Dock &amp; Menue Bar 1."/>
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://harumasa.github.io/github_pages/20200829_log_en_setup_for_mac.html" /><link rel="next" href="https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html" /><link rel="stylesheet" href="/github_pages/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)",
-        "inLanguage": "ja",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/harumasa.github.io\/github_pages\/20200829_log_en_setup_for_mac.html"
-        },"genre": "page","wordcount":  1187 ,
-        "url": "https:\/\/harumasa.github.io\/github_pages\/20200829_log_en_setup_for_mac.html","datePublished": "2020-08-29T00:00:00+09:00","dateModified": "2020-07-20T00:00:00+09:00","license": "harumasa All rights reserved.","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "Author"
-            },"description": ""
-    }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+<title>Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git) | harumasa.txt</title>
+<link rel="manifest" href="/github_pages/manifest.json">
+<link rel="icon" href="/github_pages/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/github_pages/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/github_pages/flexsearch.min.js"></script>
+  <script defer src="/github_pages/en.search.min.7f998dab296f6d411acb44635aad02540d57365149d077fb9f4db6211589ec39.js" integrity="sha256-f5mNqylvbUEay0RjWq0CVA1XNlFJ0Hf7n022IRWJ7Dk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/github_pages/"><span>harumasa.txt</span>
+  </a>
+</h2>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/github_pages/" title="harumasa.txt">My cool site</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/github_pages/" title="harumasa.txt">My cool site</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)</h1><div class="content" id="content"><h2 id="introduction">Introduction</h2>
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/github_pages/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)</strong>
+
+  <label for="toc-control">
+    
+    <img src="/github_pages/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#macos-monterey">macOS Monterey</a>
+      <ul>
+        <li><a href="#1-system-preferences">1. System Preferences</a></li>
+        <li><a href="#2-desktop">2. Desktop</a></li>
+        <li><a href="#3-finder">3. Finder</a></li>
+        <li><a href="#4-safari">4. Safari</a></li>
+        <li><a href="#5-facetime">5. FaceTime</a></li>
+        <li><a href="#6-messages">6. Messages</a></li>
+        <li><a href="#7-terminal">7. Terminal</a></li>
+      </ul>
+    </li>
+    <li><a href="#prezto">Prezto</a></li>
+    <li><a href="#bettersnaptool">BetterSnapTool</a>
+      <ul>
+        <li><a href="#1-preferences">1. Preferences</a></li>
+      </ul>
+    </li>
+    <li><a href="#homebrew">Homebrew</a></li>
+    <li><a href="#hyper">Hyper</a>
+      <ul>
+        <li><a href="#1-preferences-1">1. Preferences</a></li>
+      </ul>
+    </li>
+    <li><a href="#visual-studio-code">Visual Studio Code</a>
+      <ul>
+        <li><a href="#1-accounts">1. Accounts</a></li>
+      </ul>
+    </li>
+    <li><a href="#docker-desktop">Docker Desktop</a>
+      <ul>
+        <li><a href="#1-preferences-2">1. Preferences</a></li>
+        <li><a href="#2-directory-structure">2. Directory Structure</a></li>
+        <li><a href="#3-jupyter-notebook">3. Jupyter Notebook</a></li>
+      </ul>
+    </li>
+    <li><a href="#git">Git</a>
+      <ul>
+        <li><a href="#1-initial-setting">1. Initial setting</a></li>
+        <li><a href="#2-global-gitignore">2. Global gitignore</a></li>
+        <li><a href="#3-github">3. GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#etc">etc</a>
+      <ul>
+        <li><a href="#reset-launchpad">Reset Launchpad</a></li>
+      </ul>
+    </li>
+    <li><a href="#anaconda">Anaconda</a>
+      <ul>
+        <li><a href="#1-path">1. PATH</a></li>
+        <li><a href="#2-jupyter-notebook">2. Jupyter Notebook</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
 <ul>
 <li>Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)</li>
 <li>OS: macOS Monterey</li>
@@ -75,27 +187,51 @@
 <li>Docker Desktop</li>
 <li>Git</li>
 </ul>
-<h2 id="macos-monterey">macOS Monterey</h2>
-<h3 id="1-system-preferences">1. System Preferences</h3>
-<h4 id="11-general">1.1. General</h4>
+<h2 id="macos-monterey">
+  macOS Monterey
+  <a class="anchor" href="#macos-monterey">#</a>
+</h2>
+<h3 id="1-system-preferences">
+  1. System Preferences
+  <a class="anchor" href="#1-system-preferences">#</a>
+</h3>
+<h4 id="11-general">
+  1.1. General
+  <a class="anchor" href="#11-general">#</a>
+</h4>
 <ul>
 <li>Click in the scroll bar to: Jump to the spot that&rsquo;s clicked</li>
 <li>Prefer tabs: Turn on Ask to keep changes when closing documents</li>
 </ul>
-<h4 id="12-desktop--screen-saver">1.2. Desktop &amp; Screen Saver</h4>
-<h5 id="122-screen-saver">1.2.2. Screen Saver</h5>
+<h4 id="12-desktop--screen-saver">
+  1.2. Desktop &amp; Screen Saver
+  <a class="anchor" href="#12-desktop--screen-saver">#</a>
+</h4>
+<h5 id="122-screen-saver">
+  1.2.2. Screen Saver
+  <a class="anchor" href="#122-screen-saver">#</a>
+</h5>
 <ul>
 <li>Turn off Show screen saver after</li>
 </ul>
-<h4 id="13-dock--menue-bar">1.3. Dock &amp; Menue Bar</h4>
-<h5 id="131-dock--menue-bar">1.3.1. Dock &amp; Menue Bar</h5>
+<h4 id="13-dock--menue-bar">
+  1.3. Dock &amp; Menue Bar
+  <a class="anchor" href="#13-dock--menue-bar">#</a>
+</h4>
+<h5 id="131-dock--menue-bar">
+  1.3.1. Dock &amp; Menue Bar
+  <a class="anchor" href="#131-dock--menue-bar">#</a>
+</h5>
 <ul>
 <li>Minimize windows using: Scale effect</li>
 <li>Turn on Double-click a window&rsquo;s title bar to: minimize</li>
 <li>Turn on Minimize windows into application icon</li>
 <li>Turn on Automatically hide and show the Dock</li>
 </ul>
-<h5 id="1314-clock">1.3.14. Clock</h5>
+<h5 id="1314-clock">
+  1.3.14. Clock
+  <a class="anchor" href="#1314-clock">#</a>
+</h5>
 <ul>
 <li>Data options:
 <ul>
@@ -108,20 +244,35 @@
 </ul>
 </li>
 </ul>
-<h5 id="1316-siri">1.3.16. Siri</h5>
+<h5 id="1316-siri">
+  1.3.16. Siri
+  <a class="anchor" href="#1316-siri">#</a>
+</h5>
 <ul>
 <li>Turn off Show Siri in menu bar</li>
 </ul>
-<h4 id="14-mission-control">1.4. Mission Control</h4>
+<h4 id="14-mission-control">
+  1.4. Mission Control
+  <a class="anchor" href="#14-mission-control">#</a>
+</h4>
 <ul>
 <li>Turn off Automatically rearrange Spaces based on most recent use</li>
 </ul>
-<h4 id="17-language--region">1.7. Language &amp; Region</h4>
+<h4 id="17-language--region">
+  1.7. Language &amp; Region
+  <a class="anchor" href="#17-language--region">#</a>
+</h4>
 <ul>
 <li>Preferred languages: English - Primary, Japanese</li>
 </ul>
-<h4 id="113-accessibility">1.13. Accessibility</h4>
-<h5 id="11310-pointer-control--mouse--trackpad">1.13.10. Pointer Control &gt; Mouse &amp; Trackpad</h5>
+<h4 id="113-accessibility">
+  1.13. Accessibility
+  <a class="anchor" href="#113-accessibility">#</a>
+</h4>
+<h5 id="11310-pointer-control--mouse--trackpad">
+  1.13.10. Pointer Control &gt; Mouse &amp; Trackpad
+  <a class="anchor" href="#11310-pointer-control--mouse--trackpad">#</a>
+</h5>
 <ul>
 <li>Trackpad Options
 <ul>
@@ -129,7 +280,10 @@
 </ul>
 </li>
 </ul>
-<h4 id="116-security--privacy">1.16. Security &amp; Privacy</h4>
+<h4 id="116-security--privacy">
+  1.16. Security &amp; Privacy
+  <a class="anchor" href="#116-security--privacy">#</a>
+</h4>
 <ul>
 <li>Advanced
 <ul>
@@ -137,12 +291,18 @@
 </ul>
 </li>
 </ul>
-<h5 id="1161-general">1.16.1. General</h5>
+<h5 id="1161-general">
+  1.16.1. General
+  <a class="anchor" href="#1161-general">#</a>
+</h5>
 <ul>
 <li>Require password: immediately after sleep or screen saver begins</li>
 <li>Turn on Use your Apple Watch to unlock apps your Mac</li>
 </ul>
-<h5 id="1163-firewall">1.16.3. Firewall</h5>
+<h5 id="1163-firewall">
+  1.16.3. Firewall
+  <a class="anchor" href="#1163-firewall">#</a>
+</h5>
 <ul>
 <li>Turn on Firewall</li>
 <li>Firewall Options
@@ -152,16 +312,28 @@
 </ul>
 </li>
 </ul>
-<h4 id="117-software-update">1.17. Software Update</h4>
+<h4 id="117-software-update">
+  1.17. Software Update
+  <a class="anchor" href="#117-software-update">#</a>
+</h4>
 <ul>
 <li>Turn on Automatically keep my Mac up to date</li>
 </ul>
-<h4 id="119-bluetooth">1.19. Bluetooth</h4>
+<h4 id="119-bluetooth">
+  1.19. Bluetooth
+  <a class="anchor" href="#119-bluetooth">#</a>
+</h4>
 <ul>
 <li>Turn on Show Bluetooth in menu bar</li>
 </ul>
-<h4 id="122-keyboard">1.22. Keyboard</h4>
-<h5 id="1221-keyboard">1.22.1. Keyboard</h5>
+<h4 id="122-keyboard">
+  1.22. Keyboard
+  <a class="anchor" href="#122-keyboard">#</a>
+</h4>
+<h5 id="1221-keyboard">
+  1.22.1. Keyboard
+  <a class="anchor" href="#1221-keyboard">#</a>
+</h5>
 <ul>
 <li>Key Repeat: Most Fast</li>
 <li>Delay Until Repeat: Most Short</li>
@@ -171,7 +343,10 @@
 </ul>
 </li>
 </ul>
-<h5 id="1222-text">1.22.2. Text</h5>
+<h5 id="1222-text">
+  1.22.2. Text
+  <a class="anchor" href="#1222-text">#</a>
+</h5>
 <ul>
 <li>Turn off Correct spelling automatically</li>
 <li>Turn off Capitalize words automatically</li>
@@ -179,7 +354,10 @@
 <li>Turn off Touch Bar typing suggestions</li>
 <li>Turn off Use smart quotes and dashes</li>
 </ul>
-<h5 id="1223-shortscuts">1.22.3. Shortscuts</h5>
+<h5 id="1223-shortscuts">
+  1.22.3. Shortscuts
+  <a class="anchor" href="#1223-shortscuts">#</a>
+</h5>
 <ul>
 <li>Keyboard
 <ul>
@@ -187,7 +365,10 @@
 </ul>
 </li>
 </ul>
-<h5 id="1224-input-sources">1.22.4. Input Sources</h5>
+<h5 id="1224-input-sources">
+  1.22.4. Input Sources
+  <a class="anchor" href="#1224-input-sources">#</a>
+</h5>
 <ul>
 <li>Japanese - Romaji
 <ul>
@@ -195,53 +376,95 @@
 </ul>
 </li>
 </ul>
-<h5 id="1225-dictation">1.22.5. Dictation</h5>
+<h5 id="1225-dictation">
+  1.22.5. Dictation
+  <a class="anchor" href="#1225-dictation">#</a>
+</h5>
 <ul>
 <li>Dictation: On</li>
 </ul>
-<h4 id="123-trackpad">1.23. Trackpad</h4>
-<h5 id="1231-point--click">1.23.1. Point &amp; Click</h5>
+<h4 id="123-trackpad">
+  1.23. Trackpad
+  <a class="anchor" href="#123-trackpad">#</a>
+</h4>
+<h5 id="1231-point--click">
+  1.23.1. Point &amp; Click
+  <a class="anchor" href="#1231-point--click">#</a>
+</h5>
 <ul>
 <li>Tracking speed: Most Fast</li>
 </ul>
-<h5 id="1233-more-gestures">1.23.3. More Gestures</h5>
+<h5 id="1233-more-gestures">
+  1.23.3. More Gestures
+  <a class="anchor" href="#1233-more-gestures">#</a>
+</h5>
 <ul>
 <li>Turn on App Expose</li>
 </ul>
-<h4 id="129-sharing">1.29. Sharing</h4>
+<h4 id="129-sharing">
+  1.29. Sharing
+  <a class="anchor" href="#129-sharing">#</a>
+</h4>
 <ul>
 <li>Change Computer Name: ${COMPUTERNAME}</li>
 </ul>
-<h4 id="130-time-machine">1.30. Time Machine</h4>
+<h4 id="130-time-machine">
+  1.30. Time Machine
+  <a class="anchor" href="#130-time-machine">#</a>
+</h4>
 <ul>
 <li>Turn on Back Up Automatically</li>
 <li>Turn on Show Time Machine in Menu bar</li>
 </ul>
-<h3 id="2-desktop">2. Desktop</h3>
+<h3 id="2-desktop">
+  2. Desktop
+  <a class="anchor" href="#2-desktop">#</a>
+</h3>
 <ul>
 <li>Turn on Use Stacks</li>
 </ul>
-<h3 id="3-finder">3. Finder</h3>
-<h4 id="31-preferences">3.1. Preferences</h4>
-<h5 id="311-general">3.1.1. General</h5>
+<h3 id="3-finder">
+  3. Finder
+  <a class="anchor" href="#3-finder">#</a>
+</h3>
+<h4 id="31-preferences">
+  3.1. Preferences
+  <a class="anchor" href="#31-preferences">#</a>
+</h4>
+<h5 id="311-general">
+  3.1.1. General
+  <a class="anchor" href="#311-general">#</a>
+</h5>
 <ul>
 <li>New Finder windows show: ${USERNAME}</li>
 </ul>
-<h5 id="313-sidebar">3.1.3. Sidebar</h5>
+<h5 id="313-sidebar">
+  3.1.3. Sidebar
+  <a class="anchor" href="#313-sidebar">#</a>
+</h5>
 <ul>
 <li>Show these items in the sidebar</li>
 </ul>
-<h5 id="314-advanced">3.1.4. Advanced</h5>
+<h5 id="314-advanced">
+  3.1.4. Advanced
+  <a class="anchor" href="#314-advanced">#</a>
+</h5>
 <ul>
 <li>Turn on Show all filename extensions</li>
 </ul>
-<h4 id="34-view">3.4. View</h4>
+<h4 id="34-view">
+  3.4. View
+  <a class="anchor" href="#34-view">#</a>
+</h4>
 <ul>
 <li>as Columns</li>
 <li>Show Path Bar</li>
 <li>Show Status Bar</li>
 </ul>
-<h4 id="35-go">3.5. Go</h4>
+<h4 id="35-go">
+  3.5. Go
+  <a class="anchor" href="#35-go">#</a>
+</h4>
 <ul>
 <li>AirDrop
 <ul>
@@ -249,43 +472,85 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-safari">4. Safari</h3>
-<h4 id="41-preferences">4.1. Preferences</h4>
-<h5 id="411-general">4.1.1. General</h5>
+<h3 id="4-safari">
+  4. Safari
+  <a class="anchor" href="#4-safari">#</a>
+</h3>
+<h4 id="41-preferences">
+  4.1. Preferences
+  <a class="anchor" href="#41-preferences">#</a>
+</h4>
+<h5 id="411-general">
+  4.1.1. General
+  <a class="anchor" href="#411-general">#</a>
+</h5>
 <ul>
 <li>Turn off Open &ldquo;safe&rdquo; files after downloading</li>
 </ul>
-<h5 id="4110-advanced">4.1.10. Advanced</h5>
+<h5 id="4110-advanced">
+  4.1.10. Advanced
+  <a class="anchor" href="#4110-advanced">#</a>
+</h5>
 <ul>
 <li>Turn on Show full website address</li>
 <li>Default encoding: Unicode (UTF-8)</li>
 <li>Turn on Show Develop menu in menu bar</li>
 </ul>
-<h4 id="44-view">4.4. View</h4>
+<h4 id="44-view">
+  4.4. View
+  <a class="anchor" href="#44-view">#</a>
+</h4>
 <ul>
 <li>Show Status Bar</li>
 </ul>
-<h3 id="5-facetime">5. FaceTime</h3>
-<h4 id="51-preferences">5.1. Preferences</h4>
-<h5 id="511-settings">5.1.1 Settings</h5>
+<h3 id="5-facetime">
+  5. FaceTime
+  <a class="anchor" href="#5-facetime">#</a>
+</h3>
+<h4 id="51-preferences">
+  5.1. Preferences
+  <a class="anchor" href="#51-preferences">#</a>
+</h4>
+<h5 id="511-settings">
+  5.1.1 Settings
+  <a class="anchor" href="#511-settings">#</a>
+</h5>
 <ul>
 <li>you can be reached for FaceTime at:</li>
 </ul>
-<h3 id="6-messages">6. Messages</h3>
-<h4 id="61-preferences">6.1. Preferences</h4>
-<h5 id="612-imessage">6.1.2 iMessage</h5>
+<h3 id="6-messages">
+  6. Messages
+  <a class="anchor" href="#6-messages">#</a>
+</h3>
+<h4 id="61-preferences">
+  6.1. Preferences
+  <a class="anchor" href="#61-preferences">#</a>
+</h4>
+<h5 id="612-imessage">
+  6.1.2 iMessage
+  <a class="anchor" href="#612-imessage">#</a>
+</h5>
 <ul>
 <li>Turn on Enable Messages in iCloud</li>
 <li>you can be reached for messages at:</li>
 <li>Turn on Send read receipts</li>
 </ul>
-<h3 id="7-terminal">7. Terminal</h3>
-<h4 id="71-preferences">7.1. Preferences</h4>
-<h5 id="712-profiles">7.1.2. Profiles</h5>
+<h3 id="7-terminal">
+  7. Terminal
+  <a class="anchor" href="#7-terminal">#</a>
+</h3>
+<h4 id="71-preferences">
+  7.1. Preferences
+  <a class="anchor" href="#71-preferences">#</a>
+</h4>
+<h5 id="712-profiles">
+  7.1.2. Profiles
+  <a class="anchor" href="#712-profiles">#</a>
+</h5>
 <ul>
 <li>Profiles
 <ul>
-<li><a href="https://cocopon.github.io/iceberg.vim/" title="Iceberg" target="_blank" rel="noopener noreffer ">Iceberg</a></li>
+<li><a href="https://cocopon.github.io/iceberg.vim/" title="Iceberg">Iceberg</a></li>
 </ul>
 </li>
 <li>Text
@@ -295,12 +560,15 @@
 <li>Color &amp; Effects &gt; Opacity: 80%</li>
 </ul>
 </li>
-<li>Font &gt; <a href="https://github.com/edihbrandon/RictyDiminished/" title="Ricty Diminished" target="_blank" rel="noopener noreffer ">Ricty Diminished</a> &amp; Size 18pt</li>
+<li>Font &gt; <a href="https://github.com/edihbrandon/RictyDiminished/" title="Ricty Diminished">Ricty Diminished</a> &amp; Size 18pt</li>
 </ul>
 </li>
 </ul>
-<h2 id="prezto">Prezto</h2>
-<p><a href="https://github.com/sorin-ionescu/prezto/" title="Prezto" target="_blank" rel="noopener noreffer ">Prezto</a> is the configuration framework for Zsh</p>
+<h2 id="prezto">
+  Prezto
+  <a class="anchor" href="#prezto">#</a>
+</h2>
+<p><a href="https://github.com/sorin-ionescu/prezto/" title="Prezto">Prezto</a> is the configuration framework for Zsh</p>
 <p>Install Command Line Tools</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># xcode-select --install</span>
 </span></span></code></pre></div><p>Check for Command Line Tools updates</p>
@@ -331,15 +599,27 @@
 </span></span><span style="display:flex;"><span>zstyle <span style="color:#e6db74">&#39;:prezto:module:prompt&#39;</span> theme <span style="color:#e6db74">&#39;pure&#39;</span> <span style="color:#75715e"># sorin to pure</span>
 </span></span><span style="display:flex;"><span>+++
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># source ~/.zpreztorc</span>
-</span></span></code></pre></div><h2 id="bettersnaptool">BetterSnapTool</h2>
+</span></span></code></pre></div><h2 id="bettersnaptool">
+  BetterSnapTool
+  <a class="anchor" href="#bettersnaptool">#</a>
+</h2>
 <p>Install BetterSnapTool from App Store</p>
-<h3 id="1-preferences">1. Preferences</h3>
-<h4 id="11-general-settings">1.1 General Settings</h4>
+<h3 id="1-preferences">
+  1. Preferences
+  <a class="anchor" href="#1-preferences">#</a>
+</h3>
+<h4 id="11-general-settings">
+  1.1 General Settings
+  <a class="anchor" href="#11-general-settings">#</a>
+</h4>
 <ul>
 <li>Turn on Start BetterSnapTool everytime your Mac starts up</li>
 <li>Turn off Show menubar icon (click twice on the app icon to open this preferences if hidden)</li>
 </ul>
-<h4 id="13-keyboard-shortcuts">1.3. Keyboard Shortcuts</h4>
+<h4 id="13-keyboard-shortcuts">
+  1.3. Keyboard Shortcuts
+  <a class="anchor" href="#13-keyboard-shortcuts">#</a>
+</h4>
 <ul>
 <li>maximize: shift + command + F</li>
 <li>left half: shift + command + ←</li>
@@ -347,16 +627,25 @@
 <li>top half: shift + command + ↑</li>
 <li>bottom half: shift + command + ↓</li>
 </ul>
-<h2 id="homebrew">Homebrew</h2>
-<p><a href="https://brew.sh/" title="Homebrew" target="_blank" rel="noopener noreffer ">Homebrew</a></p>
+<h2 id="homebrew">
+  Homebrew
+  <a class="anchor" href="#homebrew">#</a>
+</h2>
+<p><a href="https://brew.sh/" title="Homebrew">Homebrew</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># /bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># brew cask install hyper</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># brew cask install visual-studio-code</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># brew cask install docker</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># brew install git</span>
-</span></span></code></pre></div><h2 id="hyper">Hyper</h2>
-<p><a href="https://hyper.is" title="Hyper" target="_blank" rel="noopener noreffer ">Hyper</a></p>
-<h3 id="1-preferences-1">1. Preferences</h3>
+</span></span></code></pre></div><h2 id="hyper">
+  Hyper
+  <a class="anchor" href="#hyper">#</a>
+</h2>
+<p><a href="https://hyper.is" title="Hyper">Hyper</a></p>
+<h3 id="1-preferences-1">
+  1. Preferences
+  <a class="anchor" href="#1-preferences-1">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh:.hyper.js" data-lang="zsh:.hyper.js"><span style="display:flex;"><span><span style="color:#f92672">+++</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">:</span> {
@@ -379,9 +668,15 @@
 </span></span><span style="display:flex;"><span>  ],
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">+++</span>
 </span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><h2 id="visual-studio-code">Visual Studio Code</h2>
-<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" title="Visual Studio Code" target="_blank" rel="noopener noreffer ">Visual Studio Code</a></p>
-<h3 id="1-accounts">1. Accounts</h3>
+</span></span></code></pre></div><h2 id="visual-studio-code">
+  Visual Studio Code
+  <a class="anchor" href="#visual-studio-code">#</a>
+</h2>
+<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" title="Visual Studio Code">Visual Studio Code</a></p>
+<h3 id="1-accounts">
+  1. Accounts
+  <a class="anchor" href="#1-accounts">#</a>
+</h3>
 <ul>
 <li>Setting Sync is On</li>
 </ul>
@@ -407,15 +702,30 @@
 <li>Trailing Spaces</li>
 <li>YAML</li>
 </ul>
-<h2 id="docker-desktop">Docker Desktop</h2>
-<p><a href="https://www.docker.com" title="Docker" target="_blank" rel="noopener noreffer ">Docker</a></p>
-<h3 id="1-preferences-2">1. Preferences</h3>
-<h4 id="14-advanced">1.4. Advanced</h4>
+<h2 id="docker-desktop">
+  Docker Desktop
+  <a class="anchor" href="#docker-desktop">#</a>
+</h2>
+<p><a href="https://www.docker.com" title="Docker">Docker</a></p>
+<h3 id="1-preferences-2">
+  1. Preferences
+  <a class="anchor" href="#1-preferences-2">#</a>
+</h3>
+<h4 id="14-advanced">
+  1.4. Advanced
+  <a class="anchor" href="#14-advanced">#</a>
+</h4>
 <ul>
 <li>Memory: [$X]GB (Default: 2GB)</li>
 </ul>
-<h3 id="2-directory-structure">2. Directory Structure</h3>
-<h4 id="21-directory-structure">2.1. Directory Structure</h4>
+<h3 id="2-directory-structure">
+  2. Directory Structure
+  <a class="anchor" href="#2-directory-structure">#</a>
+</h3>
+<h4 id="21-directory-structure">
+  2.1. Directory Structure
+  <a class="anchor" href="#21-directory-structure">#</a>
+</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>.
 </span></span><span style="display:flex;"><span>├── .dockerignore
 </span></span><span style="display:flex;"><span>├── .gitignore
@@ -423,14 +733,23 @@
 </span></span><span style="display:flex;"><span>├── docker-compose.yml
 </span></span><span style="display:flex;"><span>├── Dockerfile
 </span></span><span style="display:flex;"><span>└── notebook/  <span style="color:#75715e"># Jupyter Notebook Files</span>
-</span></span></code></pre></div><h4 id="22-dockerignore">2.2. .dockerignore</h4>
+</span></span></code></pre></div><h4 id="22-dockerignore">
+  2.2. .dockerignore
+  <a class="anchor" href="#22-dockerignore">#</a>
+</h4>
 <pre tabindex="0"><code class="language-zsh:.dockerignore" data-lang="zsh:.dockerignore">data
 notebook
-</code></pre><h4 id="23-gitignore">2.3. .gitignore</h4>
-<p><a href="https://github.com/github/gitignore/" title="github/gitignore" target="_blank" rel="noopener noreffer ">github/gitignore</a></p>
+</code></pre><h4 id="23-gitignore">
+  2.3. .gitignore
+  <a class="anchor" href="#23-gitignore">#</a>
+</h4>
+<p><a href="https://github.com/github/gitignore/" title="github/gitignore">github/gitignore</a></p>
 <pre tabindex="0"><code class="language-zsh:.gitignore" data-lang="zsh:.gitignore"># Python
 +++
-</code></pre><h4 id="25-docker-composeyml">2.5. docker-compose.yml</h4>
+</code></pre><h4 id="25-docker-composeyml">
+  2.5. docker-compose.yml
+  <a class="anchor" href="#25-docker-composeyml">#</a>
+</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml:docker-compose.yml" data-lang="yml:docker-compose.yml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">jupyter</span>:
@@ -441,11 +760,17 @@ notebook
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">$PWD/notebook:/dev/work</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">working_dir</span>: <span style="color:#ae81ff">/dev/work</span>
-</span></span></code></pre></div><h4 id="26-dockerfile">2.6. Dockerfile</h4>
+</span></span></code></pre></div><h4 id="26-dockerfile">
+  2.6. Dockerfile
+  <a class="anchor" href="#26-dockerfile">#</a>
+</h4>
 <pre tabindex="0"><code class="language-Dockerfile:Dockerfile" data-lang="Dockerfile:Dockerfile">FROM jupyter/datascience-notebook:python-3.10.4 # Use specific version (:latest Use latest version)
 
 RUN pip install -U pip
-</code></pre><h3 id="3-jupyter-notebook">3. Jupyter Notebook</h3>
+</code></pre><h3 id="3-jupyter-notebook">
+  3. Jupyter Notebook
+  <a class="anchor" href="#3-jupyter-notebook">#</a>
+</h3>
 <p>Launch Jupyter Notebook</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># docker-compose up --build</span>
 </span></span></code></pre></div><p>Check logs</p>
@@ -455,22 +780,37 @@ RUN pip install -U pip
 </span></span><span style="display:flex;"><span>jupyter_1  |    Or copy and paste one of these URLs:
 </span></span><span style="display:flex;"><span>jupyter_1  |        http://XXXXXXXXXXXX:8888/?token<span style="color:#f92672">=</span>XXXXXXXXXXXX
 </span></span><span style="display:flex;"><span>jupyter_1  |     or http://127.0.0.1:8888/?token<span style="color:#f92672">=</span>XXXXXXXXXXXX
-</span></span></code></pre></div><h2 id="git">Git</h2>
-<p><a href="https://git-scm.com" title="Git" target="_blank" rel="noopener noreffer ">Git</a></p>
-<h3 id="1-initial-setting">1. Initial setting</h3>
+</span></span></code></pre></div><h2 id="git">
+  Git
+  <a class="anchor" href="#git">#</a>
+</h2>
+<p><a href="https://git-scm.com" title="Git">Git</a></p>
+<h3 id="1-initial-setting">
+  1. Initial setting
+  <a class="anchor" href="#1-initial-setting">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># git config --global user.name ${USERNAME}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># git config --global user.email ${USEREMAIL}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># git config --global color.ui true</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># git config --global help.autocorrect 1</span>
-</span></span></code></pre></div><h3 id="2-global-gitignore">2. Global gitignore</h3>
+</span></span></code></pre></div><h3 id="2-global-gitignore">
+  2. Global gitignore
+  <a class="anchor" href="#2-global-gitignore">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># vim ~/.gitignore_global</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Copy and paste the contents of <span style="color:#f92672">[</span>github/gitignore<span style="color:#f92672">](</span>https://github.com/github/gitignore/ <span style="color:#e6db74">&#34;github/gitignore&#34;</span><span style="color:#f92672">)</span>
 </span></span></code></pre></div><p>Enable global gitignore</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span><span style="color:#75715e"># git config --global core.excludesfile ~/.gitignore_global</span>
-</span></span></code></pre></div><h3 id="3-github">3. GitHub</h3>
-<p><a href="https://github.com/" title="GitHub" target="_blank" rel="noopener noreffer ">GitHub</a></p>
-<h4 id="31-settings">3.1. Settings</h4>
+</span></span></code></pre></div><h3 id="3-github">
+  3. GitHub
+  <a class="anchor" href="#3-github">#</a>
+</h3>
+<p><a href="https://github.com/" title="GitHub">GitHub</a></p>
+<h4 id="31-settings">
+  3.1. Settings
+  <a class="anchor" href="#31-settings">#</a>
+</h4>
 <ul>
 <li>Security
 <ul>
@@ -478,7 +818,10 @@ RUN pip install -U pip
 </ul>
 </li>
 </ul>
-<h4 id="32-clone-with-https">3.2. Clone with HTTPS</h4>
+<h4 id="32-clone-with-https">
+  3.2. Clone with HTTPS
+  <a class="anchor" href="#32-clone-with-https">#</a>
+</h4>
 <p>Generate Personal Access Token</p>
 <ul>
 <li>Setting &gt; Developer settings &gt; Personal access tokens
@@ -488,7 +831,10 @@ RUN pip install -U pip
 </li>
 </ul>
 <p>Use Personal Access Token instead of password</p>
-<h4 id="33-clone-with-ssh">3.3. Clone with SSH</h4>
+<h4 id="33-clone-with-ssh">
+  3.3. Clone with SSH
+  <a class="anchor" href="#33-clone-with-ssh">#</a>
+</h4>
 <p>Generate SSH keys</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>mkdir ~/.ssh
 </span></span><span style="display:flex;"><span>cd ~/.ssh
@@ -518,31 +864,152 @@ Host github
 </span></span><span style="display:flex;"><span>Settings &gt; SSH and GPG keys &gt; New SSH key &gt; Paste to Key &gt; Add key
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>ssh -T git@github.com
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>ssh git@github.com
-</span></span></code></pre></div><h2 id="etc">etc</h2>
-<h3 id="reset-launchpad">Reset Launchpad</h3>
+</span></span></code></pre></div><h2 id="etc">
+  etc
+  <a class="anchor" href="#etc">#</a>
+</h2>
+<h3 id="reset-launchpad">
+  Reset Launchpad
+  <a class="anchor" href="#reset-launchpad">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
-</span></span></code></pre></div><h2 id="anaconda">Anaconda</h2>
-<p><a href="https://www.anaconda.com" title="Anaconda" target="_blank" rel="noopener noreffer ">Anaconda</a>
-<a href="https://docs.anaconda.com/anaconda/install/mac-os/" title="Installing on macOS" target="_blank" rel="noopener noreffer ">Installing on macOS</a></p>
-<h3 id="1-path">1. PATH</h3>
+</span></span></code></pre></div><h2 id="anaconda">
+  Anaconda
+  <a class="anchor" href="#anaconda">#</a>
+</h2>
+<p><a href="https://www.anaconda.com" title="Anaconda">Anaconda</a>
+<a href="https://docs.anaconda.com/anaconda/install/mac-os/" title="Installing on macOS">Installing on macOS</a></p>
+<h3 id="1-path">
+  1. PATH
+  <a class="anchor" href="#1-path">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.zprofile
 </span></span></code></pre></div><pre tabindex="0"><code class="language-zsh:.zprofile" data-lang="zsh:.zprofile">source ~/opt/anaconda3/etc/profile.d/conda.sh
-</code></pre><h3 id="2-jupyter-notebook">2. Jupyter Notebook</h3>
+</code></pre><h3 id="2-jupyter-notebook">
+  2. Jupyter Notebook
+  <a class="anchor" href="#2-jupyter-notebook">#</a>
+</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.jupyter/custom/custom.css
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css:custom.css" data-lang="css:custom.css"><span style="display:flex;"><span>.<span style="color:#a6e22e">CodeMirror</span> <span style="color:#f92672">pre</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: Ricty Diminished;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></div></div></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/github_pages/" target="_blank"></a></span></div>
-        </div>
-    </footer></div>
+</span></span></code></pre></div></article>
+ 
+      
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/github_pages/js/theme.min.js"></script></body>
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#macos-monterey">macOS Monterey</a>
+      <ul>
+        <li><a href="#1-system-preferences">1. System Preferences</a></li>
+        <li><a href="#2-desktop">2. Desktop</a></li>
+        <li><a href="#3-finder">3. Finder</a></li>
+        <li><a href="#4-safari">4. Safari</a></li>
+        <li><a href="#5-facetime">5. FaceTime</a></li>
+        <li><a href="#6-messages">6. Messages</a></li>
+        <li><a href="#7-terminal">7. Terminal</a></li>
+      </ul>
+    </li>
+    <li><a href="#prezto">Prezto</a></li>
+    <li><a href="#bettersnaptool">BetterSnapTool</a>
+      <ul>
+        <li><a href="#1-preferences">1. Preferences</a></li>
+      </ul>
+    </li>
+    <li><a href="#homebrew">Homebrew</a></li>
+    <li><a href="#hyper">Hyper</a>
+      <ul>
+        <li><a href="#1-preferences-1">1. Preferences</a></li>
+      </ul>
+    </li>
+    <li><a href="#visual-studio-code">Visual Studio Code</a>
+      <ul>
+        <li><a href="#1-accounts">1. Accounts</a></li>
+      </ul>
+    </li>
+    <li><a href="#docker-desktop">Docker Desktop</a>
+      <ul>
+        <li><a href="#1-preferences-2">1. Preferences</a></li>
+        <li><a href="#2-directory-structure">2. Directory Structure</a></li>
+        <li><a href="#3-jupyter-notebook">3. Jupyter Notebook</a></li>
+      </ul>
+    </li>
+    <li><a href="#git">Git</a>
+      <ul>
+        <li><a href="#1-initial-setting">1. Initial setting</a></li>
+        <li><a href="#2-global-gitignore">2. Global gitignore</a></li>
+        <li><a href="#3-github">3. GitHub</a></li>
+      </ul>
+    </li>
+    <li><a href="#etc">etc</a>
+      <ul>
+        <li><a href="#reset-launchpad">Reset Launchpad</a></li>
+      </ul>
+    </li>
+    <li><a href="#anaconda">Anaconda</a>
+      <ul>
+        <li><a href="#1-path">1. PATH</a></li>
+        <li><a href="#2-jupyter-notebook">2. Jupyter Notebook</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

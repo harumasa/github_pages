@@ -1,9 +1,58 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>harumasa.txt</title>
-        <link>https://harumasa.github.io/github_pages/</link>
-        <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>harumasa All rights reserved.</copyright>
-            <atom:link href="https://harumasa.github.io/github_pages/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>harumasa.txt</title>
+    <link>https://harumasa.github.io/github_pages/</link>
+    <description>Recent content on harumasa.txt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>harumasa All rights reserved.</copyright><atom:link href="https://harumasa.github.io/github_pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Unfinished] How to install WSL 2 (Windows Subsystem for Linux 2) on Windows 11</title>
+      <link>https://harumasa.github.io/github_pages/20220716_log_en_install_wsl_2.html</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0900</pubDate>
+      
+      <guid>https://harumasa.github.io/github_pages/20220716_log_en_install_wsl_2.html</guid>
+      <description>Introduction # Model: DELL Inspiron 14 (5485) OS: Windows 11 Visual Studio Code PwerShell 7 Windows Terminal WSL 2 Docker Engine PowerShell 7 # PowerShell Documentation
+Windows Terminal # What is Windows Terminal?
+1. Settings # 1.1. Startup # Default profile: PowerShell (PowerShell 7) Default terminal application: Windows Terminal Append to JSON file.
+Ricty Diminished
++++ &amp;#34;defaults&amp;#34;: { &amp;#34;font&amp;#34;: { &amp;#34;face&amp;#34;: &amp;#34;Ricty Diminished&amp;#34;, &amp;#34;size&amp;#34;: 18 }, &amp;#34;opacity&amp;#34;: 80, &amp;#34;useAcrylic&amp;#34;: false }, +++ Visual Studio Code # Visual Studio Code</description>
+    </item>
+    
+    <item>
+      <title>How to install Arch Linux</title>
+      <link>https://harumasa.github.io/github_pages/20200829_log_en_install_archlinux.html</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://harumasa.github.io/github_pages/20200829_log_en_install_archlinux.html</guid>
+      <description>Introduction # Model: DELL Inspiron 14 (5485) OS: Arch Linux Installation guide # The official installation guide
+1. Pre-installation # 1.1 Acquire an installation image # Arch Linux Downloads
+1.2. Verify signature # # gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig 1.3. Prepare an installation medium # # dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=direct status=progress 1.4. Boot the live environment # Set BIOS configuration: Press F2
+Fast Boot: Thorough (Disabled) Secure Boot: Disabled Boot from the USB flash drive: Press F12</description>
+    </item>
+    
+    <item>
+      <title>Hugo &#43; GitHub Pages でブログを作成する</title>
+      <link>https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html</guid>
+      <description>はじめに # Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Catalina 10.15.6 Hugo 0.74.3 ターミナルから以下の手順でブログ記事を更新し GitHub Pages への公開までをシェルスクリプトで自動化します。
+# Hugo によって生成されたプロジェクトのルートディレクトリまで移動します。 cd ~/github_pages # 新規マークダウンファイルを作成し編集します。 hugo new github_pages.md # シェルスクリプトを実行します。 ./deploy.sh Hugo の設定 # 1. インストール # Hugo をインストールします。
+brew install hugo Hugo プロジェクトを作成します。
+hugo new site github_pages 2. テーマのダウンロード # 公式サイト Hugo の Hugo テーマ一覧 からテーマを選び git clone します。
+cd ~/github_pages git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen 3.</description>
+    </item>
+    
+    <item>
+      <title>Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)</title>
+      <link>https://harumasa.github.io/github_pages/20200829_log_en_setup_for_mac.html</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://harumasa.github.io/github_pages/20200829_log_en_setup_for_mac.html</guid>
+      <description>Introduction # Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Homebrew Hyper Visual Studio Code Docker Desktop Git macOS Monterey # 1. System Preferences # 1.1. General # Click in the scroll bar to: Jump to the spot that&amp;rsquo;s clicked Prefer tabs: Turn on Ask to keep changes when closing documents 1.2. Desktop &amp;amp; Screen Saver # 1.2.2. Screen Saver # Turn off Show screen saver after 1.</description>
+    </item>
+    
+  </channel>
 </rss>

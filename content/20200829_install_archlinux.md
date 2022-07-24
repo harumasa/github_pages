@@ -36,6 +36,7 @@ dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=di
 
 Set BIOS configuration: Press F2
 
+- Sleep Mode: Force S3
 - Fast Boot: Thorough (Disabled)
 - Secure Boot: Disabled
 
@@ -446,11 +447,15 @@ sudo nano /etc/pacman.conf
 Uncommment line Color
 ```
 
-### 91. Localization/Japanese
+## Localization/Japanese
 
-#### 91.4 Input methods
+### 1. Fonts
 
-Setup Fcitx and Mozc
+### 3. Input methods
+
+#### 3.3. Mozc
+
+Setup Mozc and Fcitx
 
 ```zsh
 sudo pacman -S fcitx fcitx-mozc fcitx-im fcitx-configtool
@@ -472,21 +477,36 @@ Reboot
 reboot
 ```
 
-### 92. Settings
+## Settings
 
-- Settings > Appearance > Fonts
-  - Default Font Noto Sans CJK JP Regular, 9pt
-  - Default Monospace Font Noto Sans Mono CJK JP Regular, 9pt
-
-- Settings > FcitxConfiguration > Input Method
-  - Add Mozc
-
-### 99. etc
+- Appearance
+  - Fonts
+    - Default Font: Noto Sans CJK JP Regular, 18pt
+    - Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt
+- Clipboard Manager Settings
+  - Behavior
+    - Paste instantly: Ctrl+V
+- FcitxConfiguration
+  - Input Method
+    - Add Mozc
+- Keyboard
+  - behavior
+    - Typing Settings > Repeat speed: 100
+  - Layout
+    - Keyboard Layout: Japanese
 
 ```zsh
-paru -S hyper-git
-paru -S prezto-git
-paru -S visual-studio-code-bin
+xset s off
+```
+
+## etc
+
+```zsh
+sudo paru -S google-chrome
+sudo pacman -S firefox
+sudo pacman -S firefox-i18n-ja
+sudo paru -S prezto-git
+sudo paru -S visual-studio-code-bin
 sudo pacman -S docker
 sudo systemctl enable docker
 sudo pacman -S git

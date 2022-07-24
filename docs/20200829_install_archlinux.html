@@ -41,6 +41,7 @@
 </span></span></code></pre></div><h4 id="14-boot-the-live-environment">1.4. Boot the live environment</h4>
 <p>Set BIOS configuration: Press F2</p>
 <ul>
+<li>Sleep Mode: Force S3</li>
 <li>Fast Boot: Thorough (Disabled)</li>
 <li>Secure Boot: Disabled</li>
 </ul>
@@ -252,9 +253,11 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo nano /etc/pacman.conf
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Uncommment line Color
-</span></span></code></pre></div><h3 id="91-localizationjapanese">91. Localization/Japanese</h3>
-<h4 id="914-input-methods">91.4 Input methods</h4>
-<p>Setup Fcitx and Mozc</p>
+</span></span></code></pre></div><h2 id="localizationjapanese">Localization/Japanese</h2>
+<h3 id="1-fonts">1. Fonts</h3>
+<h3 id="3-input-methods">3. Input methods</h3>
+<h4 id="33-mozc">3.3. Mozc</h4>
+<p>Setup Mozc and Fcitx</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S fcitx fcitx-mozc fcitx-im fcitx-configtool
 </span></span></code></pre></div><p>Set environment variables for IM modules</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano ~/.xprofile
@@ -264,26 +267,58 @@
 </span></span><span style="display:flex;"><span>export XMODIFIERS<span style="color:#f92672">=</span>@im<span style="color:#f92672">=</span>fcitx
 </span></span></code></pre></div><p>Reboot</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>reboot
-</span></span></code></pre></div><h3 id="92-settings">92. Settings</h3>
+</span></span></code></pre></div><h2 id="settings">Settings</h2>
 <ul>
-<li>
-<p>Settings &gt; Appearance &gt; Fonts</p>
+<li>Appearance
 <ul>
-<li>Default Font Noto Sans CJK JP Regular, 9pt</li>
-<li>Default Monospace Font Noto Sans Mono CJK JP Regular, 9pt</li>
+<li>Fonts
+<ul>
+<li>Default Font: Noto Sans CJK JP Regular, 18pt</li>
+<li>Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt</li>
 </ul>
 </li>
-<li>
-<p>Settings &gt; FcitxConfiguration &gt; Input Method</p>
+</ul>
+</li>
+<li>Clipboard Manager Settings
+<ul>
+<li>Behavior
+<ul>
+<li>Paste instantly: Ctrl+V</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>FcitxConfiguration
+<ul>
+<li>Input Method
 <ul>
 <li>Add Mozc</li>
 </ul>
 </li>
 </ul>
-<h3 id="99-etc">99. etc</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S hyper-git
-</span></span><span style="display:flex;"><span>paru -S prezto-git
-</span></span><span style="display:flex;"><span>paru -S visual-studio-code-bin
+</li>
+<li>Keyboard
+<ul>
+<li>behavior
+<ul>
+<li>Typing Settings &gt; Repeat speed: 100</li>
+</ul>
+</li>
+<li>Layout
+<ul>
+<li>Keyboard Layout: Japanese</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>xset s off
+</span></span></code></pre></div><h2 id="etc">etc</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo paru -S google-chrome
+</span></span><span style="display:flex;"><span>sudo pacman -S firefox
+</span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja
+</span></span><span style="display:flex;"><span>sudo paru -S prezto-git
+</span></span><span style="display:flex;"><span>sudo paru -S visual-studio-code-bin
 </span></span><span style="display:flex;"><span>sudo pacman -S docker
 </span></span><span style="display:flex;"><span>sudo systemctl enable docker
 </span></span><span style="display:flex;"><span>sudo pacman -S git

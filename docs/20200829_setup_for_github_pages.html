@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/stylesheet.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <title>Create a static website with Hugo and Host it with Github Pages</title>
+</head>
+<body>
+  <section id="page-title">
+    <h1><a href="./">harumasa.txt</a></h1>
+  </section>
+
+<section class="blog-post">
+  <h1>Create a static website with Hugo and Host it with Github Pages</h1>
+  <div class="blog-post-subheader">
+    August 29, 2020
+    (Lastmod: Jul 24 2022)
+  </div>
+  <div class="blog-post-content">
+    <h2 id="introduction">Introduction</h2>
+<ul>
+<li>Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)</li>
+<li>OS: macOS Monterey</li>
+<li>Hugo</li>
+</ul>
+<h2 id="setup-hugo">Setup Hugo</h2>
+<h3 id="1-install-hugo">1. Install Hugo</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><h3 id="2-create-a-new-site">2. Create a New Site</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>hugo new site github_pages
+</span></span></code></pre></div><h3 id="3-add-a-theme">3. Add a Theme</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/github_pages
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/alex-shpak/elephants.git themes/elephants
+</span></span><span style="display:flex;"><span>echo theme <span style="color:#f92672">=</span> <span style="color:#ae81ff">\&#34;</span>elephants<span style="color:#ae81ff">\&#34;</span> &gt;&gt; config.toml
+</span></span></code></pre></div><h3 id="4-add-some-content">4. Add Some Content</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/github_pages/content
+</span></span><span style="display:flex;"><span>hugo new github_pages_01.md
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/github_pages/content/github_pages_01.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: <span style="color:#e6db74">&#34;TITLE&#34;</span>
+</span></span><span style="display:flex;"><span>date: 2022-01-01T00:00:00+09:00
+</span></span><span style="display:flex;"><span>lastmod: 2022-01-01T00:00:00+09:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## XXXXXXXX</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><h3 id="5-start-the-hugo-server">5. Start the Hugo server</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>hugo server --theme<span style="color:#f92672">=</span>elephants --buildDrafts --watch
+</span></span></code></pre></div><h3 id="6-customize-the-theme">6. Customize the Theme</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/github_pages/config.toml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>baseURL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://</span><span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span><span style="color:#e6db74">.github.io/github_pages/&#34;</span>
+</span></span><span style="display:flex;"><span>languageCode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ja-jp&#34;</span>
+</span></span><span style="display:flex;"><span>publishDir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;docs&#34;</span>
+</span></span><span style="display:flex;"><span>theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-book&#34;</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>TITLE<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h3 id="7-build-static-pages">7. Build static pages</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><h2 id="setup-github-pages">Setup GitHub Pages</h2>
+<h3 id="1-create-github-repository">1. Create GitHub Repository</h3>
+<p>Create GitHub Repository <code>github_pages</code></p>
+<h3 id="2-configure-github-pages">2. Configure GitHub Pages</h3>
+<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site/" title="Configuring a publishing source for your GitHub Pages site">Configuring a publishing source for your GitHub Pages site</a></p>
+<h3 id="3-create-shellscript">3. Create ShellScript</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/github_pages
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>git remote add origin git@github.com:<span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span>/github_pages.git
+</span></span><span style="display:flex;"><span>git push -u origin master
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/github_pages/deploy.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LANG<span style="color:#f92672">=</span>C
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#34;\033[0;33mDeploying updates to GitHub...\033[0m&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build the project</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add changes to git</span>
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Commit changes</span>
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;commit `date`&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Push source and build repos</span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>chmod +x deploy.sh
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>./deploy.sh
+</span></span></code></pre></div>
+  </div>
+</section>
+
+
+</body>
+</html>

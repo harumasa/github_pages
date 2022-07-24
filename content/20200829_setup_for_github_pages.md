@@ -43,9 +43,7 @@ hugo new github_pages_01.md
 
 ```zsh
 vim ~/github_pages/content/github_pages_01.md
-```
 
-```md:github_pages.md
 ---
 title: "TITLE"
 date: 2022-01-01T00:00:00+09:00
@@ -60,16 +58,14 @@ draft: false
 ### 5. Start the Hugo server
 
 ```zsh
-hugo server --theme=hugo-book --buildDrafts --watch
+hugo server --theme=elephants --buildDrafts --watch
 ```
 
 ### 6. Customize the Theme
 
 ```zsh
 vim ~/github_pages/config.toml
-```
 
-```toml:config.toml
 baseURL = "https://${USERNAME}.github.io/github_pages/"
 languageCode = "ja-jp"
 publishDir = "docs"
@@ -106,9 +102,7 @@ git push -u origin master
 
 ```zsh
 vim ~/github_pages/deploy.sh
-```
 
-```sh:deploy.sh
 #!/bin/bash
 
 LANG=C

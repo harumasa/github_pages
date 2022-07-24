@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/stylesheet.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <title>Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)</title>
+</head>
+<body>
+  <section id="page-title">
+    <h1><a href="./">harumasa.txt</a></h1>
+  </section>
+
+<section class="blog-post">
+  <h1>Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)</h1>
+  <div class="blog-post-subheader">
+    August 29, 2020
+    (Lastmod: Jul 24 2020)
+  </div>
+  <div class="blog-post-content">
+    <h2 id="introduction">Introduction</h2>
+<ul>
+<li>Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)</li>
+<li>OS: macOS Monterey</li>
+<li>Homebrew</li>
+<li>Hyper</li>
+<li>Visual Studio Code</li>
+<li>Docker Desktop</li>
+<li>Git</li>
+</ul>
+<h2 id="macos-monterey">macOS Monterey</h2>
+<h3 id="1-system-preferences">1. System Preferences</h3>
+<h4 id="11-general">1.1. General</h4>
+<ul>
+<li>Click in the scroll bar to: Jump to the spot that&rsquo;s clicked</li>
+<li>Prefer tabs: Turn on Ask to keep changes when closing documents</li>
+</ul>
+<h4 id="12-desktop--screen-saver">1.2. Desktop &amp; Screen Saver</h4>
+<h5 id="122-screen-saver">1.2.2. Screen Saver</h5>
+<ul>
+<li>Turn off Show screen saver after</li>
+</ul>
+<h4 id="13-dock--menue-bar">1.3. Dock &amp; Menue Bar</h4>
+<h5 id="131-dock--menue-bar">1.3.1. Dock &amp; Menue Bar</h5>
+<ul>
+<li>Minimize windows using: Scale effect</li>
+<li>Turn on Double-click a window&rsquo;s title bar to: minimize</li>
+<li>Turn on Minimize windows into application icon</li>
+<li>Turn on Automatically hide and show the Dock</li>
+</ul>
+<h5 id="1314-clock">1.3.14. Clock</h5>
+<ul>
+<li>Data options:
+<ul>
+<li>Turn on Show the date of the week</li>
+</ul>
+</li>
+<li>Time options:
+<ul>
+<li>Turn on Display the time with seconds</li>
+</ul>
+</li>
+</ul>
+<h5 id="1316-siri">1.3.16. Siri</h5>
+<ul>
+<li>Turn off Show Siri in menu bar</li>
+</ul>
+<h4 id="14-mission-control">1.4. Mission Control</h4>
+<ul>
+<li>Turn off Automatically rearrange Spaces based on most recent use</li>
+</ul>
+<h4 id="17-language--region">1.7. Language &amp; Region</h4>
+<ul>
+<li>Preferred languages: English - Primary, Japanese</li>
+</ul>
+<h4 id="113-accessibility">1.13. Accessibility</h4>
+<h5 id="11310-pointer-control--mouse--trackpad">1.13.10. Pointer Control &gt; Mouse &amp; Trackpad</h5>
+<ul>
+<li>Trackpad Options
+<ul>
+<li>Turn on Enable dragging: three finger drag</li>
+</ul>
+</li>
+</ul>
+<h4 id="116-security--privacy">1.16. Security &amp; Privacy</h4>
+<ul>
+<li>Advanced
+<ul>
+<li>Turn on Require an administrator password to access system-wide preferences</li>
+</ul>
+</li>
+</ul>
+<h5 id="1161-general">1.16.1. General</h5>
+<ul>
+<li>Require password: immediately after sleep or screen saver begins</li>
+<li>Turn on Use your Apple Watch to unlock apps your Mac</li>
+</ul>
+<h5 id="1163-firewall">1.16.3. Firewall</h5>
+<ul>
+<li>Turn on Firewall</li>
+<li>Firewall Options
+<ul>
+<li>Turn off Automatically allow build-in software to receive incoming connections</li>
+<li>Turn on Enable stealth mode</li>
+</ul>
+</li>
+</ul>
+<h4 id="117-software-update">1.17. Software Update</h4>
+<ul>
+<li>Turn on Automatically keep my Mac up to date</li>
+</ul>
+<h4 id="119-bluetooth">1.19. Bluetooth</h4>
+<ul>
+<li>Turn on Show Bluetooth in menu bar</li>
+</ul>
+<h4 id="122-keyboard">1.22. Keyboard</h4>
+<h5 id="1221-keyboard">1.22.1. Keyboard</h5>
+<ul>
+<li>Key Repeat: Most Fast</li>
+<li>Delay Until Repeat: Most Short</li>
+<li>Modifier Keys
+<ul>
+<li>Caps Lock Key: Command</li>
+</ul>
+</li>
+</ul>
+<h5 id="1222-text">1.22.2. Text</h5>
+<ul>
+<li>Turn off Correct spelling automatically</li>
+<li>Turn off Capitalize words automatically</li>
+<li>Turn off Add period with double-space</li>
+<li>Turn off Touch Bar typing suggestions</li>
+<li>Turn off Use smart quotes and dashes</li>
+</ul>
+<h5 id="1223-shortscuts">1.22.3. Shortscuts</h5>
+<ul>
+<li>Keyboard
+<ul>
+<li>Move focus to next window: option + tab</li>
+</ul>
+</li>
+</ul>
+<h5 id="1224-input-sources">1.22.4. Input Sources</h5>
+<ul>
+<li>Japanese - Romaji
+<ul>
+<li>&ldquo;¥&rdquo; key generates: \ (Backslash)</li>
+</ul>
+</li>
+</ul>
+<h5 id="1225-dictation">1.22.5. Dictation</h5>
+<ul>
+<li>Dictation: On</li>
+</ul>
+<h4 id="123-trackpad">1.23. Trackpad</h4>
+<h5 id="1231-point--click">1.23.1. Point &amp; Click</h5>
+<ul>
+<li>Tracking speed: Most Fast</li>
+</ul>
+<h5 id="1233-more-gestures">1.23.3. More Gestures</h5>
+<ul>
+<li>Turn on App Expose</li>
+</ul>
+<h4 id="129-sharing">1.29. Sharing</h4>
+<ul>
+<li>Change Computer Name: ${COMPUTERNAME}</li>
+</ul>
+<h4 id="130-time-machine">1.30. Time Machine</h4>
+<ul>
+<li>Turn on Back Up Automatically</li>
+<li>Turn on Show Time Machine in Menu bar</li>
+</ul>
+<h3 id="2-desktop">2. Desktop</h3>
+<ul>
+<li>Turn on Use Stacks</li>
+</ul>
+<h3 id="3-finder">3. Finder</h3>
+<h4 id="31-preferences">3.1. Preferences</h4>
+<h5 id="311-general">3.1.1. General</h5>
+<ul>
+<li>New Finder windows show: ${USERNAME}</li>
+</ul>
+<h5 id="313-sidebar">3.1.3. Sidebar</h5>
+<ul>
+<li>Show these items in the sidebar</li>
+</ul>
+<h5 id="314-advanced">3.1.4. Advanced</h5>
+<ul>
+<li>Turn on Show all filename extensions</li>
+</ul>
+<h4 id="34-view">3.4. View</h4>
+<ul>
+<li>as Columns</li>
+<li>Show Path Bar</li>
+<li>Show Status Bar</li>
+</ul>
+<h4 id="35-go">3.5. Go</h4>
+<ul>
+<li>AirDrop
+<ul>
+<li>Allow me to be discovered by: No One</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-safari">4. Safari</h3>
+<h4 id="41-preferences">4.1. Preferences</h4>
+<h5 id="411-general">4.1.1. General</h5>
+<ul>
+<li>Turn off Open &ldquo;safe&rdquo; files after downloading</li>
+</ul>
+<h5 id="4110-advanced">4.1.10. Advanced</h5>
+<ul>
+<li>Turn on Show full website address</li>
+<li>Default encoding: Unicode (UTF-8)</li>
+<li>Turn on Show Develop menu in menu bar</li>
+</ul>
+<h4 id="44-view">4.4. View</h4>
+<ul>
+<li>Show Status Bar</li>
+</ul>
+<h3 id="5-facetime">5. FaceTime</h3>
+<h4 id="51-preferences">5.1. Preferences</h4>
+<h5 id="511-settings">5.1.1 Settings</h5>
+<ul>
+<li>you can be reached for FaceTime at:</li>
+</ul>
+<h3 id="6-messages">6. Messages</h3>
+<h4 id="61-preferences">6.1. Preferences</h4>
+<h5 id="612-imessage">6.1.2 iMessage</h5>
+<ul>
+<li>Turn on Enable Messages in iCloud</li>
+<li>you can be reached for messages at:</li>
+<li>Turn on Send read receipts</li>
+</ul>
+<h3 id="7-terminal">7. Terminal</h3>
+<h4 id="71-preferences">7.1. Preferences</h4>
+<h5 id="712-profiles">7.1.2. Profiles</h5>
+<ul>
+<li>Profiles
+<ul>
+<li><a href="https://cocopon.github.io/iceberg.vim/" title="Iceberg">Iceberg</a></li>
+</ul>
+</li>
+<li>Text
+<ul>
+<li>Background
+<ul>
+<li>Color &amp; Effects &gt; Opacity: 80%</li>
+</ul>
+</li>
+<li>Font &gt; <a href="https://github.com/edihbrandon/RictyDiminished/" title="Ricty Diminished">Ricty Diminished</a> &amp; Size 18pt</li>
+</ul>
+</li>
+</ul>
+<h2 id="prezto">Prezto</h2>
+<ul>
+<li><a href="https://github.com/sorin-ionescu/prezto/" title="Prezto">Prezto</a></li>
+</ul>
+<p>Install Command Line Tools</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>xcode-select --install
+</span></span></code></pre></div><p>Check for Command Line Tools updates</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>git clone --recursive https://github.com/sorin-ionescu/prezto.git <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>ZDOTDIR<span style="color:#66d9ef">:-</span>$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.zprezto&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>setopt EXTENDED_GLOB
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> rcfile in <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>ZDOTDIR<span style="color:#66d9ef">:-</span>$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>/.zprezto/runcoms/^README.md<span style="color:#f92672">(</span>.N<span style="color:#f92672">)</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  ln -s <span style="color:#e6db74">&#34;</span>$rcfile<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>ZDOTDIR<span style="color:#66d9ef">:-</span>$HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.</span><span style="color:#e6db74">${</span>rcfile:t<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.zpreztorc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>zstyle <span style="color:#e6db74">&#39;:prezto:load&#39;</span> pmodule <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;environment&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;terminal&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;editor&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;history&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;directory&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;spectrum&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;utility&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;completion&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;autosuggestions&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;git&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;history-substring-search&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;syntax-highlighting&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;prompt&#39;</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Auto set to &#39;off&#39; on dumb terminals.</span>
+</span></span><span style="display:flex;"><span>zstyle <span style="color:#e6db74">&#39;:prezto:module:prompt&#39;</span> theme <span style="color:#e6db74">&#39;pure&#39;</span> <span style="color:#75715e"># sorin to pure</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>source ~/.zpreztorc
+</span></span></code></pre></div><h2 id="bettersnaptool">BetterSnapTool</h2>
+<p>Install BetterSnapTool from App Store</p>
+<h3 id="1-preferences">1. Preferences</h3>
+<h4 id="11-general-settings">1.1 General Settings</h4>
+<ul>
+<li>Turn on Start BetterSnapTool everytime your Mac starts up</li>
+<li>Turn off Show menubar icon (click twice on the app icon to open this preferences if hidden)</li>
+</ul>
+<h4 id="13-keyboard-shortcuts">1.3. Keyboard Shortcuts</h4>
+<ul>
+<li>maximize: shift + command + F</li>
+<li>left half: shift + command + ←</li>
+<li>right half: shift + command + →</li>
+<li>top half: shift + command + ↑</li>
+<li>bottom half: shift + command + ↓</li>
+</ul>
+<h2 id="homebrew">Homebrew</h2>
+<ul>
+<li><a href="https://brew.sh/" title="Homebrew">Homebrew</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>brew cask install hyper
+</span></span><span style="display:flex;"><span>brew cask install visual-studio-code
+</span></span><span style="display:flex;"><span>brew cask install docker
+</span></span><span style="display:flex;"><span>brew install git
+</span></span></code></pre></div><h2 id="hyper">Hyper</h2>
+<ul>
+<li><a href="https://hyper.is" title="Hyper">Hyper</a></li>
+</ul>
+<h3 id="1-preferences-1">1. Preferences</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh:.hyper.js" data-lang="zsh:.hyper.js"><span style="display:flex;"><span><span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// default font size in pixels for all tabs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span>, <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Change</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// font family with optional fallbacks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fontFamily</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Ricty Diminished&#39;</span>, <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Change</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// rest of the config # Add
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">opacity</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.80</span>, <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Add</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;hyper-material-theme&#34;</span>, <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Add</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;hyper-opacity&#34;</span>, <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Add</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">+++</span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="visual-studio-code">Visual Studio Code</h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/products/visual-studio-code/" title="Visual Studio Code">Visual Studio Code</a></li>
+</ul>
+<h3 id="1-accounts">1. Accounts</h3>
+<ul>
+<li>Setting Sync is On</li>
+</ul>
+<p>Installed Extensions</p>
+<ul>
+<li>Docker</li>
+<li>GitHub Theme</li>
+<li>GlassIt-VSC</li>
+<li>Jupyter</li>
+<li>Jupyter Keymap</li>
+<li>Jupyter Notebook Renderers</li>
+<li>markdownlint</li>
+<li>Marp for VS Code</li>
+<li>Material Icon Theme</li>
+<li>Path Intellisense</li>
+<li>Prettier - Code formatter</li>
+<li>Pylance</li>
+<li>Python</li>
+<li>Remote - Containers</li>
+<li>Remote - SSH</li>
+<li>Remote - WSL</li>
+<li>Remote Development</li>
+<li>Trailing Spaces</li>
+<li>YAML</li>
+</ul>
+<h2 id="docker-desktop">Docker Desktop</h2>
+<ul>
+<li><a href="https://www.docker.com" title="Docker">Docker</a></li>
+</ul>
+<h3 id="1-preferences-2">1. Preferences</h3>
+<h4 id="14-advanced">1.4. Advanced</h4>
+<ul>
+<li>Memory: [$X]GB (Default: 2GB)</li>
+</ul>
+<h3 id="2-directory-structure">2. Directory Structure</h3>
+<h4 id="21-directory-structure">2.1. Directory Structure</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── .dockerignore
+</span></span><span style="display:flex;"><span>├── .gitignore
+</span></span><span style="display:flex;"><span>├── data/      <span style="color:#75715e"># Data Files</span>
+</span></span><span style="display:flex;"><span>├── docker-compose.yml
+</span></span><span style="display:flex;"><span>├── Dockerfile
+</span></span><span style="display:flex;"><span>└── notebook/  <span style="color:#75715e"># Jupyter Notebook Files</span>
+</span></span></code></pre></div><h4 id="22-dockerignore">2.2. .dockerignore</h4>
+<pre tabindex="0"><code class="language-zsh:.dockerignore" data-lang="zsh:.dockerignore">data
+notebook
+</code></pre><h4 id="23-gitignore">2.3. .gitignore</h4>
+<ul>
+<li><a href="https://github.com/github/gitignore/" title="github/gitignore">github/gitignore</a></li>
+</ul>
+<pre tabindex="0"><code class="language-zsh:.gitignore" data-lang="zsh:.gitignore"># Python
++++
+</code></pre><h4 id="25-docker-composeyml">2.5. docker-compose.yml</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml:docker-compose.yml" data-lang="yml:docker-compose.yml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">jupyter</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>: <span style="color:#ae81ff">jupyter notebook --allow-root --ip=0.0.0.0 --no-browser</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8888</span>:<span style="color:#ae81ff">8888</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">$PWD/notebook:/dev/work</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">working_dir</span>: <span style="color:#ae81ff">/dev/work</span>
+</span></span></code></pre></div><h4 id="26-dockerfile">2.6. Dockerfile</h4>
+<pre tabindex="0"><code class="language-Dockerfile:Dockerfile" data-lang="Dockerfile:Dockerfile">FROM jupyter/datascience-notebook:python-3.10.4 # Use specific version (:latest Use latest version)
+
+RUN pip install -U pip
+</code></pre><h3 id="3-jupyter-notebook">3. Jupyter Notebook</h3>
+<p>Launch Jupyter Notebook</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>docker-compose up --build
+</span></span></code></pre></div><p>Check logs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>jupyter_1  |    To access the notebook, open this file in a browser:
+</span></span><span style="display:flex;"><span>jupyter_1  |        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
+</span></span><span style="display:flex;"><span>jupyter_1  |    Or copy and paste one of these URLs:
+</span></span><span style="display:flex;"><span>jupyter_1  |        http://XXXXXXXXXXXX:8888/?token<span style="color:#f92672">=</span>XXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>jupyter_1  |     or http://127.0.0.1:8888/?token<span style="color:#f92672">=</span>XXXXXXXXXXXX
+</span></span></code></pre></div><h2 id="git">Git</h2>
+<ul>
+<li><a href="https://git-scm.com" title="Git">Git</a></li>
+</ul>
+<h3 id="1-initial-setting">1. Initial setting</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">${</span>USEREMAIL<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>git config --global color.ui true
+</span></span><span style="display:flex;"><span>git config --global help.autocorrect <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h3 id="2-global-gitignore">2. Global gitignore</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.gitignore_global
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Copy and paste the contents of <span style="color:#f92672">[</span>github/gitignore<span style="color:#f92672">](</span>https://github.com/github/gitignore/ <span style="color:#e6db74">&#34;github/gitignore&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Enable global gitignore</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>git config --global core.excludesfile ~/.gitignore_global
+</span></span></code></pre></div><h3 id="3-github">3. GitHub</h3>
+<ul>
+<li><a href="https://github.com/" title="GitHub">GitHub</a></li>
+</ul>
+<h4 id="31-settings">3.1. Settings</h4>
+<ul>
+<li>Security
+<ul>
+<li>Enable Two-factor authentication</li>
+</ul>
+</li>
+</ul>
+<h4 id="32-clone-with-https">3.2. Clone with HTTPS</h4>
+<p>Generate Personal Access Token</p>
+<ul>
+<li>Setting &gt; Developer settings &gt; Personal access tokens
+<ul>
+<li>Generate new token &gt; Turn on repo &gt; Generate token</li>
+</ul>
+</li>
+</ul>
+<p>Use Personal Access Token instead of password</p>
+<h4 id="33-clone-with-ssh">3.3. Clone with SSH</h4>
+<p>Generate SSH keys</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>mkdir ~/.ssh
+</span></span><span style="display:flex;"><span>cd ~/.ssh
+</span></span><span style="display:flex;"><span>ssh-keygen -t rsa -C <span style="color:#e6db74">${</span>REGISTEREDMAIL<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter enter
+</span></span><span style="display:flex;"><span>Enter passphrase
+</span></span><span style="display:flex;"><span>Enter same passphrase again
+</span></span></code></pre></div><p>Add connection settings to config</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.ssh/config
+</span></span></code></pre></div><pre tabindex="0"><code class="language-zsh:config" data-lang="zsh:config"># global setting for macOS
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host github
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
+  User git
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>cd ~/.ssh
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> id_rsa
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>ssh-add ~/.ssh/id_rsa
+</span></span><span style="display:flex;"><span>ssh-add -l
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>pbcopy &lt; ~/.ssh/id_rsa.pub
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Settings &gt; SSH and GPG keys &gt; New SSH key &gt; Paste to Key &gt; Add key
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>ssh -T git@github.com
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>ssh git@github.com
+</span></span></code></pre></div><h2 id="reset-launchpad">Reset Launchpad</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+</span></span></code></pre></div><h2 id="anaconda">Anaconda</h2>
+<ul>
+<li><a href="https://www.anaconda.com" title="Anaconda">Anaconda</a></li>
+<li><a href="https://docs.anaconda.com/anaconda/install/mac-os/" title="Installing on macOS">Installing on macOS</a></li>
+</ul>
+<h3 id="1-path">1. PATH</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.zprofile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>source ~/opt/anaconda3/etc/profile.d/conda.sh
+</span></span></code></pre></div><h3 id="2-jupyter-notebook">2. Jupyter Notebook</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>vim ~/.jupyter/custom/custom.css
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.CodeMirror pre <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    font-family: Ricty Diminished;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
+  </div>
+</section>
+
+
+</body>
+</html>

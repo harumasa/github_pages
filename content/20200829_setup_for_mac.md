@@ -227,24 +227,24 @@ draft: false
 Install Command Line Tools
 
 ```zsh
-# xcode-select --install
+xcode-select --install
 ```
 
 Check for Command Line Tools updates
 
 ```zsh
-# git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 ```
 
 ```zsh
-# setopt EXTENDED_GLOB
-# for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-#   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-# done
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 ```
 
 ```zsh
-# vim ~/.zpreztorc
+vim ~/.zpreztorc
 
 +++
 zstyle ':prezto:load' pmodule \
@@ -268,7 +268,7 @@ zstyle ':prezto:module:prompt' theme 'pure' # sorin to pure
 ```
 
 ```zsh
-# source ~/.zpreztorc
+source ~/.zpreztorc
 ```
 
 ## BetterSnapTool
@@ -295,14 +295,14 @@ Install BetterSnapTool from App Store
 - [Homebrew](https://brew.sh/ "Homebrew")
 
 ```zsh
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ```zsh
-# brew cask install hyper
-# brew cask install visual-studio-code
-# brew cask install docker
-# brew install git
+brew cask install hyper
+brew cask install visual-studio-code
+brew cask install docker
+brew install git
 ```
 
 ## Hyper
@@ -434,7 +434,7 @@ RUN pip install -U pip
 Launch Jupyter Notebook
 
 ```zsh
-# docker-compose up --build
+docker-compose up --build
 ```
 
 Check logs
@@ -455,16 +455,16 @@ jupyter_1  |     or http://127.0.0.1:8888/?token=XXXXXXXXXXXX
 ### 1. Initial setting
 
 ```zsh
-# git config --global user.name ${USERNAME}
-# git config --global user.email ${USEREMAIL}
-# git config --global color.ui true
-# git config --global help.autocorrect 1
+git config --global user.name ${USERNAME}
+git config --global user.email ${USEREMAIL}
+git config --global color.ui true
+git config --global help.autocorrect 1
 ```
 
 ### 2. Global gitignore
 
 ```zsh
-# vim ~/.gitignore_global
+vim ~/.gitignore_global
 
 Copy and paste the contents of [github/gitignore](https://github.com/github/gitignore/ "github/gitignore")
 ```
@@ -472,7 +472,7 @@ Copy and paste the contents of [github/gitignore](https://github.com/github/giti
 Enable global gitignore
 
 ```zsh
-# git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 ```
 
 ### 3. GitHub
@@ -565,9 +565,7 @@ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
 ```zsh
 vim ~/.zprofile
-```
 
-```zsh:.zprofile
 source ~/opt/anaconda3/etc/profile.d/conda.sh
 ```
 
@@ -575,9 +573,7 @@ source ~/opt/anaconda3/etc/profile.d/conda.sh
 
 ```zsh
 vim ~/.jupyter/custom/custom.css
-```
 
-```css:custom.css
 .CodeMirror pre {
     font-family: Ricty Diminished;
 }

@@ -86,38 +86,38 @@ Installed Extensions
 [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/en-us/windows/wsl/ "Windows Subsystem for Linux Documentation")
 
 ```powershell
-# wsl --install -d Debian
+wsl --install -d Debian
 ```
 
-```bsh
-# exit (or ctrl + D)
-```
-
-```powershell
-# wsl -l -v
+```zsh
+exit (or ctrl + D)
 ```
 
 ```powershell
-# debian
+wsl -l -v
 ```
 
-```bsh
-# cat /etc/os-release
+```powershell
+debian
 ```
 
-```bsh
-# sudo apt update
-# sudo apt upgrade
+```zsh
+cat /etc/os-release
 ```
 
-```bsh
-# sudo dpkg-reconfigure locales
+```zsh
+sudo apt update
+sudo apt upgrade
+```
+
+```zsh
+sudo dpkg-reconfigure locales
 
 ja_JP.UTF-8
 ```
 
-```bsh
-# sudo dpkg-reconfigure tzdata
+```zsh
+sudo dpkg-reconfigure tzdata
 
 Asia/Tokyo
 ```

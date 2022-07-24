@@ -91,7 +91,7 @@ Create GitHub Repository `github_pages`
 
 ### 2. Configure GitHub Pages
 
-Settings >> General >> Pages >> Source >> Branch: gh-pages
+[Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 ### 3. Create ShellScript
 

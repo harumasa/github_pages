@@ -1,15 +1,15 @@
 ---
 title: "Hugo + GitHub Pages でブログを作成する"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2020-08-29T00:00:00+09:00
+lastmod: 2022-07-24T00:00:00+09:00
 draft: false
 ---
 
 ## はじめに
 
 - Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)
-- OS: macOS Catalina 10.15.6
-- Hugo 0.74.3
+- OS: macOS Monterey
+- Hugo
 
 ターミナルから以下の手順でブログ記事を更新し GitHub Pages への公開までをシェルスクリプトで自動化します。
 
@@ -26,48 +26,43 @@ hugo new github_pages.md
 
 ## Hugo の設定
 
-### 1. インストール
-
-Hugo をインストールします。
+### 1. Install Hugo
 
 ```zsh
 brew install hugo
 ```
 
-Hugo プロジェクトを作成します。
+### 2. Create a New Site
 
 ```zsh
 hugo new site github_pages
 ```
 
-### 2. テーマのダウンロード
-
-公式サイト [Hugo](https://gohugo.io/ "Hugo") の [Hugo テーマ一覧](https://themes.gohugo.io/ "Hugo テーマ一覧") からテーマを選び `git clone` します。
+### 3. Add a Theme
 
 ```zsh
 cd ~/github_pages
-git clone https://github.com/rakuishi/hugo-zen.git themes/hugo-zen
+git init
+git submodule add https://github.com/alex-shpak/hugo-book.git themes/hugo-book
+echo theme = \"hugo-book\" >> config.toml
 ```
 
-### 3. 記事の作成
-
-`github_pages.md` を作成します。
+### 4. Add Some Content
 
 ```zsh
 cd ~/github_pages/content
-hugo new github_pages.md
+hugo new github_pages_01.md
 ```
 
-`github_pages.md` を編集します。
-
 ```zsh
-vim ~/github_pages/content/github_pages.md
+vim ~/github_pages/content/github_pages_01.md
 ```
 
 ```md:github_pages.md
 ---
 title: "TITLE"
-date: 2020-01-01T00:00:00+09:00
+date: 2022-01-01T00:00:00+09:00
+lastmod: 2022-01-01T00:00:00+09:00
 draft: false
 ---
 
@@ -75,9 +70,9 @@ draft: false
 +++
 ```
 
-### 4. 設定ファイルの編集
+### 5. Start the Hugo server
 
-`config.toml` を編集します。
+### 6. Customize the Theme
 
 ```zsh
 vim ~/github_pages/config.toml
@@ -103,7 +98,7 @@ logo = "./images/logo.jpg" # ~/github_pages/themes/hugo-zen/static/images/logo.j
 以下を実行するとブラウザで `localhost:1313/github_pages` からプレビューを確認することができます。
 
 ```zsh
-hugo server --theme=hugo-zen --buildDrafts --watch
+hugo server --theme=hugo-book --buildDrafts --watch
 ```
 
 - `--theme`: プレビュー時にテーマを指定します

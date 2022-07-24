@@ -1,7 +1,7 @@
 ---
 title: "Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2020-07-20T00:00:00+09:00
+lastmod: 2020-07-24T00:00:00+09:00
 draft: false
 ---
 

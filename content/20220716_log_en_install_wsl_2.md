@@ -1,7 +1,7 @@
 ---
 title: "[Unfinished] How to install WSL 2 (Windows Subsystem for Linux 2) on Windows 11"
 date: 2022-07-16T00:00:00+09:00
-lastmod: 2022-07-19T00:00:00+09:00
+lastmod: 2022-07-24T00:00:00+09:00
 draft: false
 ---
 

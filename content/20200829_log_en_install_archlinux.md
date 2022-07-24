@@ -1,7 +1,7 @@
 ---
 title: "How to install Arch Linux"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2022-07-19T00:00:00+09:00
+lastmod: 2022-07-24T00:00:00+09:00
 draft: false
 ---
 
@@ -38,7 +38,6 @@ Set BIOS configuration: Press F2
 
 - Fast Boot: Thorough (Disabled)
 - Secure Boot: Disabled
-
 
 Boot from the USB flash drive: Press F12
 

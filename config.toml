@@ -1,13 +1,5 @@
-author = "harumasa"
 baseURL = "https://harumasa.github.io/github_pages/"
-copyright = "harumasa All rights reserved."
-languageCode = "ja"
+languageCode = "ja-jp"
 publishDir = "docs"
-theme = "elephants-master"
+theme = "hugo-book"
 title = "harumasa.txt"
-uglyurls = true
-
-[params]
-github = "https://github.com/harumasa/"
-logo = "./images/logo.jpg"
-sitename = "harumasa.txt"

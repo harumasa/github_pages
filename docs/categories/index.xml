@@ -2,10 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on harumasa.txt</title>
-    <link>https://harumasa.github.io/github_pages/categories.html</link>
+    <link>https://harumasa.github.io/github_pages/categories/</link>
     <description>Recent content in Categories on harumasa.txt</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <copyright>harumasa All rights reserved.</copyright><atom:link href="https://harumasa.github.io/github_pages/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language><atom:link href="https://harumasa.github.io/github_pages/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

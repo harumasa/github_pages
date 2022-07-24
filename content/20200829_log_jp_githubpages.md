@@ -83,8 +83,8 @@ author = "${AUTHOR}"
 baseURL = "https://${USERNAME}.github.io/github_pages/"
 copyright = "${USERNAME} All rights reserved."
 languageCode = "ja"
-publishDir = "docs" # html 生成先を public から docs へ変更
-theme = "hugo-zen"
+publishDir = "docs"
+theme = "hugo-book"
 title = "${TITLE}"
 uglyurls = true
 

@@ -1,5 +1,5 @@
 baseURL = "https://harumasa.github.io/github_pages/"
 languageCode = "ja-jp"
 publishDir = "docs"
+sitename = "harumasa.txt"
 theme = "hugo-book"
-title = "harumasa.txt"

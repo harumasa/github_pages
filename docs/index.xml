@@ -21,6 +21,15 @@ Ricty Diminished
     </item>
     
     <item>
+      <title>Create a static website with Hugo and Host it with Github Pages</title>
+      <link>https://harumasa.github.io/github_pages/20200829_log_en_githubpages.html</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://harumasa.github.io/github_pages/20200829_log_en_githubpages.html</guid>
+      <description>Introduction Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Hugo Setup Hugo 1. Install Hugo brew install hugo 2. Create a New Site hugo new site github_pages 3. Add a Theme cd ~/github_pages git init git submodule add https://github.com/alex-shpak/elephants.git themes/elephants echo theme = \&amp;#34;elephants\&amp;#34; &amp;gt;&amp;gt; config.toml 4. Add Some Content cd ~/github_pages/content hugo new github_pages_01.md vim ~/github_pages/content/github_pages_01.md --- title: &amp;#34;TITLE&amp;#34; date: 2022-01-01T00:00:00+09:00 lastmod: 2022-01-01T00:00:00+09:00 draft: false --- ## XXXXXXXX +++ 5.</description>
+    </item>
+    
+    <item>
       <title>How to install Arch Linux</title>
       <link>https://harumasa.github.io/github_pages/20200829_log_en_install_archlinux.html</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
@@ -28,16 +37,6 @@ Ricty Diminished
       <guid>https://harumasa.github.io/github_pages/20200829_log_en_install_archlinux.html</guid>
       <description>Introduction Model: DELL Inspiron 14 (5485) OS: Arch Linux Installation guide The official installation guide 1. Pre-installation 1.1 Acquire an installation image Arch Linux Downloads 1.2. Verify signature # gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig 1.3. Prepare an installation medium # dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=direct status=progress 1.4. Boot the live environment Set BIOS configuration: Press F2
 Fast Boot: Thorough (Disabled) Secure Boot: Disabled Boot from the USB flash drive: Press F12</description>
-    </item>
-    
-    <item>
-      <title>Hugo &#43; GitHub Pages でブログを作成する</title>
-      <link>https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
-      
-      <guid>https://harumasa.github.io/github_pages/20200829_log_jp_githubpages.html</guid>
-      <description>はじめに Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Hugo ターミナルから以下の手順でブログ記事を更新し GitHub Pages への公開までをシェルスクリプトで自動化します。
-# Hugo によって生成されたプロジェクトのルートディレクトリまで移動します。 cd ~/github_pages # 新規マークダウンファイルを作成し編集します。 hugo new github_pages.md # シェルスクリプトを実行します。 ./deploy.sh Hugo の設定 1. Install Hugo brew install hugo 2. Create a New Site hugo new site github_pages 3. Add a Theme cd ~/github_pages git init git submodule add https://github.com/alex-shpak/hugo-book.git themes/hugo-book echo theme = \&amp;#34;hugo-book\&amp;#34; &amp;gt;&amp;gt; config.toml 4. Add Some Content cd ~/github_pages/content hugo new github_pages_01.</description>
     </item>
     
     <item>

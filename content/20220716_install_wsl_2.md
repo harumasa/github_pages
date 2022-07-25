@@ -10,7 +10,7 @@ draft: false
 - Model: DELL Inspiron 14 (5485)
 - OS: Windows 11
 - Visual Studio Code
-- PwerShell 7
+- PowerShell 7
 - Windows Terminal
 - WSL 2
 - Docker Engine

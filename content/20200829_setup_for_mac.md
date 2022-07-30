@@ -1,7 +1,7 @@
 ---
 title: "Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2020-07-24T00:00:00+09:00
+lastmod: 2020-07-30T00:00:00+09:00
 draft: false
 ---
 
@@ -392,7 +392,7 @@ Installed Extensions
 
 #### 2.2. .dockerignore
 
-```zsh:.dockerignore
+```zsh
 data
 notebook
 ```
@@ -401,14 +401,14 @@ notebook
 
 - [github/gitignore](https://github.com/github/gitignore/ "github/gitignore")
 
-```zsh:.gitignore
+```zsh:
 # Python
 +++
 ```
 
 #### 2.5. docker-compose.yml
 
-```yml:docker-compose.yml
+```zsh
 version: "3"
 services:
   jupyter:
@@ -417,14 +417,14 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - $PWD/notebook:/dev/work
+      - ./notebook:/dev/work
     working_dir: /dev/work
 ```
 
 #### 2.6. Dockerfile
 
-```Dockerfile:Dockerfile
-FROM jupyter/datascience-notebook:python-3.10.4 # Use specific version (:latest Use latest version)
+```zsh
+FROM gur.io/kaggle-images/python:v119 # Use specific version (:latest Use latest version)
 
 RUN pip install -U pip
 ```
@@ -434,7 +434,7 @@ RUN pip install -U pip
 Launch Jupyter Notebook
 
 ```zsh
-docker-compose up --build
+docker-compose up -d --build
 ```
 
 Check logs
@@ -511,9 +511,7 @@ Add connection settings to config
 
 ```zsh
 vim ~/.ssh/config
-```
 
-```zsh:config
 # global setting for macOS
 
 Host *
@@ -554,27 +552,4 @@ ssh git@github.com
 
 ```zsh
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
-```
-
-## Anaconda
-
-- [Anaconda](https://www.anaconda.com "Anaconda")
-- [Installing on macOS](https://docs.anaconda.com/anaconda/install/mac-os/ "Installing on macOS")
-
-### 1. PATH
-
-```zsh
-vim ~/.zprofile
-
-source ~/opt/anaconda3/etc/profile.d/conda.sh
-```
-
-### 2. Jupyter Notebook
-
-```zsh
-vim ~/.jupyter/custom/custom.css
-
-.CodeMirror pre {
-    font-family: Ricty Diminished;
-}
 ```

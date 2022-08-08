@@ -1,7 +1,7 @@
 ---
 title: "How to install Arch Linux"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2022-07-30T00:00:00+09:00
+lastmod: 2022-07-31T00:00:00+09:00
 draft: false
 ---
 
@@ -13,6 +13,10 @@ draft: false
 ## Installation guide
 
 - [Installation guide](https://wiki.archlinux.org/title/Installation_guide "Installation guide")
+
+- [archinstall](https://wiki.archlinux.org/title/Archinstall "archinstall")
+
+archinstall is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a "guided" installer.
 
 ### 1. Pre-installation
 
@@ -136,11 +140,11 @@ lsblk /dev/nvme0n1
 
 #### 2.1. Select the mirrors
 
+- [Pacman Mirrorlist Generator](https://www.archlinux.org/mirrorlist/ "Pacman Mirrorlist Generator")
+
 ```zsh
 nano /etc/pacman.d/mirrorlist
 ```
-
-- [Pacman Mirrorlist Generator](https://www.archlinux.org/mirrorlist/ "Pacman Mirrorlist Generator")
 
 #### 2.2. Install essential packages
 
@@ -404,12 +408,44 @@ sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 ```
 
+### 5. Power management
+
+#### 5.1. ACPI events
+
+- xfce4-power-manager
+  - System
+    - System power saving
+      - system sleep mpde: Hibernate
+    - Laptop Lid
+      - when laptop lid is closed: Hibernate
+  - Display
+    - Display power management: off
+- xfce4-screensaver
+  - Screensaver
+    - Enable Screensaver: off
+
+To disable both blanking and DPMS, right click on the power manager system tray icon or left click on the panel applet and make sure that the option labelled Presentation mode is ticked.
+
 ### 6. Multimedia
 
 #### 6.1. Sound System
 
 ```zsh
 sudo pacman -S pipewire
+```
+
+### 7. Networking
+
+#### 7.3. Setting up a firewall
+
+[Uncomplicated Firewall](https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall "Uncomplicated Firewall")
+
+```zsh
+sudo pacman -S ufw
+sudo systemctl enable ufw --now
+sudo systemctl status ufw
+sudo ufw enable
+sudo ufw status
 ```
 
 ### 8. Input Devices
@@ -483,21 +519,12 @@ reboot
   - Fonts
     - Default Font: Noto Sans CJK JP Regular, 18pt
     - Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt
-- Clipboard Manager Settings
-  - Behavior
-    - Paste instantly: Ctrl+V
 - FcitxConfiguration
   - Input Method
     - Add Mozc
 - Keyboard
   - behavior
     - Typing Settings > Repeat speed: 100
-  - Layout
-    - Keyboard Layout: Japanese
-
-```zsh
-xset s off
-```
 
 ## etc
 

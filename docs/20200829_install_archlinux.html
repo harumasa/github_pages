@@ -17,7 +17,7 @@
   <h1>How to install Arch Linux</h1>
   <div class="blog-post-subheader">
     August 29, 2020
-    (Lastmod: Jul 30 2022)
+    (Lastmod: Jul 31 2022)
   </div>
   <div class="blog-post-content">
     <h2 id="introduction">Introduction</h2>
@@ -27,8 +27,14 @@
 </ul>
 <h2 id="installation-guide">Installation guide</h2>
 <ul>
-<li><a href="https://wiki.archlinux.org/title/Installation_guide" title="Installation guide">Installation guide</a></li>
+<li>
+<p><a href="https://wiki.archlinux.org/title/Installation_guide" title="Installation guide">Installation guide</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/title/Archinstall" title="archinstall">archinstall</a></p>
+</li>
 </ul>
+<p>archinstall is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a &ldquo;guided&rdquo; installer.</p>
 <h3 id="1-pre-installation">1. Pre-installation</h3>
 <h4 id="11-acquire-an-installation-image">1.1 Acquire an installation image</h4>
 <ul>
@@ -112,11 +118,11 @@
 </span></span><span style="display:flex;"><span>lsblk /dev/nvme0n1
 </span></span></code></pre></div><h3 id="2-installation">2. Installation</h3>
 <h4 id="21-select-the-mirrors">2.1. Select the mirrors</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano /etc/pacman.d/mirrorlist
-</span></span></code></pre></div><ul>
+<ul>
 <li><a href="https://www.archlinux.org/mirrorlist/" title="Pacman Mirrorlist Generator">Pacman Mirrorlist Generator</a></li>
 </ul>
-<h4 id="22-install-essential-packages">2.2. Install essential packages</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano /etc/pacman.d/mirrorlist
+</span></span></code></pre></div><h4 id="22-install-essential-packages">2.2. Install essential packages</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>pacstrap /mnt base base-devel linux linux-firmware nano
 </span></span></code></pre></div><h3 id="3-configure-the-system">3. Configure the system</h3>
 <h4 id="31-fstab">3.1. Fstab</h4>
@@ -235,9 +241,54 @@
 </span></span></code></pre></div><h4 id="45-display-manager">4.5. Display manager</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S lightdm lightdm-gtk-greeter
 </span></span><span style="display:flex;"><span>sudo systemctl enable lightdm.service
-</span></span></code></pre></div><h3 id="6-multimedia">6. Multimedia</h3>
+</span></span></code></pre></div><h3 id="5-power-management">5. Power management</h3>
+<h4 id="51-acpi-events">5.1. ACPI events</h4>
+<ul>
+<li>xfce4-power-manager
+<ul>
+<li>System
+<ul>
+<li>System power saving
+<ul>
+<li>system sleep mpde: Hibernate</li>
+</ul>
+</li>
+<li>Laptop Lid
+<ul>
+<li>when laptop lid is closed: Hibernate</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Display
+<ul>
+<li>Display power management: off</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>xfce4-screensaver
+<ul>
+<li>Screensaver
+<ul>
+<li>Enable Screensaver: off</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>To disable both blanking and DPMS, right click on the power manager system tray icon or left click on the panel applet and make sure that the option labelled Presentation mode is ticked.</p>
+<h3 id="6-multimedia">6. Multimedia</h3>
 <h4 id="61-sound-system">6.1. Sound System</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S pipewire
+</span></span></code></pre></div><h3 id="7-networking">7. Networking</h3>
+<h4 id="73-setting-up-a-firewall">7.3. Setting up a firewall</h4>
+<p><a href="https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall" title="Uncomplicated Firewall">Uncomplicated Firewall</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S ufw
+</span></span><span style="display:flex;"><span>sudo systemctl enable ufw --now
+</span></span><span style="display:flex;"><span>sudo systemctl status ufw
+</span></span><span style="display:flex;"><span>sudo ufw enable
+</span></span><span style="display:flex;"><span>sudo ufw status
 </span></span></code></pre></div><h3 id="8-input-devices">8. Input Devices</h3>
 <h4 id="83-laptop-touchpads">8.3. Laptop touchpads</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S xf86-input-libinput
@@ -279,15 +330,6 @@
 </li>
 </ul>
 </li>
-<li>Clipboard Manager Settings
-<ul>
-<li>Behavior
-<ul>
-<li>Paste instantly: Ctrl+V</li>
-</ul>
-</li>
-</ul>
-</li>
 <li>FcitxConfiguration
 <ul>
 <li>Input Method
@@ -304,16 +346,10 @@
 <li>Typing Settings &gt; Repeat speed: 100</li>
 </ul>
 </li>
-<li>Layout
-<ul>
-<li>Keyboard Layout: Japanese</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>xset s off
-</span></span></code></pre></div><h2 id="etc">etc</h2>
+<h2 id="etc">etc</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo paru -S google-chrome
 </span></span><span style="display:flex;"><span>sudo pacman -S firefox
 </span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja

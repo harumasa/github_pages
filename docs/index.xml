@@ -35,8 +35,10 @@ Ricty Diminished
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
       
       <guid>https://harumasa.github.io/github_pages/20200829_install_archlinux.html</guid>
-      <description>Introduction Model: DELL Inspiron 14 (5485) OS: Arch Linux Installation guide Installation guide 1. Pre-installation 1.1 Acquire an installation image Arch Linux Downloads 1.2. Verify signature gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig 1.3. Prepare an installation medium dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=direct status=progress 1.4. Boot the live environment Set BIOS configuration: Press F2
-Sleep Mode: Force S3 Fast Boot: Thorough (Disabled) Secure Boot: Disabled Boot from the USB flash drive: Press F12</description>
+      <description>Introduction Model: DELL Inspiron 14 (5485) OS: Arch Linux Installation guide Installation guide
+archinstall
+archinstall is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a &amp;ldquo;guided&amp;rdquo; installer.
+1. Pre-installation 1.1 Acquire an installation image Arch Linux Downloads 1.2. Verify signature gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig 1.3. Prepare an installation medium dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=direct status=progress 1.4. Boot the live environment Set BIOS configuration: Press F2</description>
     </item>
     
     <item>

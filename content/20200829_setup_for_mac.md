@@ -1,5 +1,5 @@
 ---
-title: "How to setup macOS Monterey (Hyper, Visual Studio Code, Docker, Git, BetterSnapTool)"
+title: "How to setup macOS Monterey (Hyper, Visual Studio Code, Docker, Git)"
 date: 2020-08-29T00:00:00+09:00
 lastmod: 2022-08-09T00:00:00+09:00
 draft: false
@@ -528,22 +528,3 @@ ssh -T git@github.com
 ```zsh
 ssh git@github.com
 ```
-
-## BetterSnapTool
-
-Install BetterSnapTool from App Store
-
-### 1. Preferences
-
-#### 1.1 General Settings
-
-- Turn on Start BetterSnapTool everytime your Mac starts up
-- Turn off Show menubar icon (click twice on the app icon to open this preferences if hidden)
-
-#### 1.3. Keyboard Shortcuts
-
-- maximize: shift + command + F
-- left half: shift + command + ←
-- right half: shift + command + →
-- top half: shift + command + ↑
-- bottom half: shift + command + ↓

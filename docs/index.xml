@@ -13,7 +13,7 @@
       <pubDate>Sat, 16 Jul 2022 00:00:00 +0900</pubDate>
       
       <guid>https://harumasa.github.io/github_pages/20220716_install_wsl_2.html</guid>
-      <description>Introduction Model: DELL Inspiron 14 (5485) OS: Windows 11 Visual Studio Code PowerShell 7 Windows Terminal WSL 2 Docker Engine PowerShell 7 PowerShell Documentation
+      <description>Introduction Model: DELL Inspiron 14 (5485) OS: Windows 11 PowerShell 7 Windows Terminal Visual Studio Code WSL 2 Docker Engine PowerShell 7 PowerShell Documentation
 Windows Terminal What is Windows Terminal?
 1. Settings 1.1. Startup Default profile: PowerShell (PowerShell 7) Default terminal application: Windows Terminal Append to JSON file.
 Ricty Diminished

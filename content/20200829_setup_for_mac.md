@@ -1,7 +1,7 @@
 ---
 title: "Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2020-07-30T00:00:00+09:00
+lastmod: 2022-08-09T00:00:00+09:00
 draft: false
 ---
 
@@ -424,7 +424,7 @@ services:
 #### 2.6. Dockerfile
 
 ```zsh
-FROM gur.io/kaggle-images/python:v119 # Use specific version (:latest Use latest version)
+FROM gcr.io/kaggle-images/python:v119 # Use specific version (:latest Use latest version)
 
 RUN pip install -U pip
 ```

@@ -1,7 +1,7 @@
 ---
 title: "[Unfinished] How to install WSL 2 (Windows Subsystem for Linux 2) on Windows 11"
 date: 2022-07-16T00:00:00+09:00
-lastmod: 2022-07-30T00:00:00+09:00
+lastmod: 2022-08-09T00:00:00+09:00
 draft: false
 ---
 
@@ -9,9 +9,9 @@ draft: false
 
 - Model: DELL Inspiron 14 (5485)
 - OS: Windows 11
-- Visual Studio Code
 - PowerShell 7
 - Windows Terminal
+- Visual Studio Code
 - WSL 2
 - Docker Engine
 

@@ -1,5 +1,5 @@
 ---
-title: "Setup for Mac (macOS Monterey, Homebrew, Hyper, Visual Studio Code, Docker, Git)"
+title: "How to setup macOS Monterey (Hyper, Visual Studio Code, Docker, Git, BetterSnapTool)"
 date: 2020-08-29T00:00:00+09:00
 lastmod: 2022-08-09T00:00:00+09:00
 draft: false
@@ -9,11 +9,11 @@ draft: false
 
 - Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports)
 - OS: macOS Monterey
-- Homebrew
 - Hyper
 - Visual Studio Code
-- Docker Desktop
+- Docker
 - Git
+- BetterSnapTool
 
 ## macOS Monterey
 
@@ -270,25 +270,6 @@ zstyle ':prezto:module:prompt' theme 'pure' # sorin to pure
 ```zsh
 source ~/.zpreztorc
 ```
-
-## BetterSnapTool
-
-Install BetterSnapTool from App Store
-
-### 1. Preferences
-
-#### 1.1 General Settings
-
-- Turn on Start BetterSnapTool everytime your Mac starts up
-- Turn off Show menubar icon (click twice on the app icon to open this preferences if hidden)
-
-#### 1.3. Keyboard Shortcuts
-
-- maximize: shift + command + F
-- left half: shift + command + ←
-- right half: shift + command + →
-- top half: shift + command + ↑
-- bottom half: shift + command + ↓
 
 ## Homebrew
 
@@ -548,8 +529,21 @@ ssh -T git@github.com
 ssh git@github.com
 ```
 
-## Reset Launchpad
+## BetterSnapTool
 
-```zsh
-defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
-```
+Install BetterSnapTool from App Store
+
+### 1. Preferences
+
+#### 1.1 General Settings
+
+- Turn on Start BetterSnapTool everytime your Mac starts up
+- Turn off Show menubar icon (click twice on the app icon to open this preferences if hidden)
+
+#### 1.3. Keyboard Shortcuts
+
+- maximize: shift + command + F
+- left half: shift + command + ←
+- right half: shift + command + →
+- top half: shift + command + ↑
+- bottom half: shift + command + ↓

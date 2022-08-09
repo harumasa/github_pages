@@ -1,5 +1,5 @@
 ---
-title: "How to install Arch Linux"
+title: "How to setup Arch Linux (Hyper, Visual Studio Code, Docker)"
 date: 2020-08-29T00:00:00+09:00
 lastmod: 2022-08-09T00:00:00+09:00
 draft: false
@@ -9,6 +9,9 @@ draft: false
 
 - Model: DELL Inspiron 14 (5485)
 - OS: Arch Linux
+- Hyper
+- Visual Studio Code
+- Docker
 
 ## Installation guide
 

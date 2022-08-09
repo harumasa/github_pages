@@ -1,5 +1,5 @@
 ---
-title: "[Unfinished] How to install WSL 2 (Windows Subsystem for Linux 2) on Windows 11"
+title: "How to setup WSL 2 (Windows Subsystem for Linux 2) on Windows 11 (PowerShell 7, Windows Terminal, Visual Studio Code, Docker)"
 date: 2022-07-16T00:00:00+09:00
 lastmod: 2022-08-09T00:00:00+09:00
 draft: false
@@ -13,7 +13,7 @@ draft: false
 - Windows Terminal
 - Visual Studio Code
 - WSL 2
-- Docker Engine
+- Docker
 
 ## PowerShell 7
 

@@ -1,7 +1,7 @@
 ---
 title: "How to install Arch Linux"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2022-08-08T00:00:00+09:00
+lastmod: 2022-08-09T00:00:00+09:00
 draft: false
 ---
 
@@ -16,7 +16,8 @@ draft: false
 
 - [archinstall](https://wiki.archlinux.org/title/Archinstall "archinstall")
 
-archinstall is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a "guided" installer.
+[archinstall](https://wiki.archlinux.org/title/Archinstall "archinstall") is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a "guided" installer.
+[Installation guide](https://wiki.archlinux.org/title/Installation_guide "Installation guide") 1.8. through 5. are automated.
 
 ### 1. Pre-installation
 
@@ -66,8 +67,8 @@ iwctl
 [iwd]# device list
 [iwd]# station ${DEVICENAME} scan
 [iwd]# station ${DEVICENAME} get-networks
-[iwd]# station ${DEVICENAME} connect SSID
-[iwd]# exit
+[iwd]# station ${DEVICENAME} connect ${SSID}
+[iwd]# quit
 ```
 
 ```zsh
@@ -302,6 +303,8 @@ nmtui
 
 ## General recommendations
 
+- [General recommendations](https://wiki.archlinux.org/title/general_recommendations "General recommendations")
+
 ### 1. System administration
 
 #### 1.1. Users and groups
@@ -338,23 +341,25 @@ Update all packages
 sudo pacman -Syu
 ```
 
-#### 2.5. Arch User Repository
-
-Setup paru (AUR Helper)
-
-```zsh
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
-
 Utilizing multiple cores on compression
 
 ```zsh
 sudo nano /etc/makepkg.conf
 
-Change line COMPRESSXZ=(xz -c -z --threads=0 -)
+Change line COMPRESSXZ=(xz -c -z - --threads=0)
+```
+
+#### 2.5. Arch User Repository
+
+Setup paru (AUR Helper)
+
+```zsh
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd
+rm -rf paru
 ```
 
 Update all packages
@@ -414,15 +419,16 @@ sudo systemctl enable lightdm.service
 
 - xfce4-power-manager
   - System
-    - System power saving
-      - system sleep mpde: Hibernate
-    - Laptop Lid
-      - when laptop lid is closed: Hibernate
-  - Display
-    - Display power management: off
-- xfce4-screensaver
-  - Screensaver
-    - Enable Screensaver: off
+    - On battery
+      - System power saving
+        - System sleep mode: Suspend
+      - Laptop Lid
+        - when laptop lid is closed: Suspend
+    - Plugged in
+      - System power saving
+        - System sleep mode: Suspend
+      - Laptop Lid
+        - when laptop lid is closed: Suspend
 
 To disable both blanking and DPMS, right click on the power manager system tray icon or left click on the panel applet and make sure that the option labelled Presentation mode is ticked.
 
@@ -441,8 +447,8 @@ sudo pacman -S pipewire
 [Uncomplicated Firewall](https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall "Uncomplicated Firewall")
 
 ```zsh
-sudo pacman -S ufw
-sudo systemctl enable ufw --now
+sudo pacman -S ufw gufw
+sudo systemctl enable ufw
 sudo systemctl status ufw
 sudo ufw enable
 sudo ufw status
@@ -450,19 +456,87 @@ sudo ufw status
 
 ### 8. Input Devices
 
+#### 8.1. Keyboard layouts
+
+- xfce4-settings
+  - Keyboard
+    - behavior
+      - Typing Settings > Repeat speed: 100
+
+#### 8.2. Mouse buttons
+
+```zsh
+paru -S imwheel
+```
+
+```zsh
+nano ~/.imwheelrc
+
+".*"
+None, Up, Button4, 3
+None, Down, Button5, 2
+```
+
+```zsh
+imwheel -k
+```
+
+- xfce4-session
+  - Application Autostart
+    - Add application
+      - Name: imwheel
+      - Command: /usr/bin/imwheel
+
 #### 8.3. Laptop touchpads
 
 ```zsh
 sudo pacman -S xf86-input-libinput
 ```
 
+- xfce4-settings
+  - Mouse and Touchpad
+    - Devices
+      - Devices: DELL Touchpad
+        - Buttons and Feedback
+          - Buttons: Reverse scroll direction: on
+        - Touchpad
+          - General: Tap touchpad to click: on
+
 ### 11. Appearance
 
 #### 11.1. Fonts
 
+[Google Fonts](https://fonts.google.com "Google Fonts")
+
 ```zsh
-sudo pacman -S noto-fonts-cjk
+sudo pacman -S noto-fonts{,-cjk,-emoji,-extra}
 ```
+
+[Ricty Diminished](https://github.com/edihbrandon/RictyDiminished "Ricty Diminished")
+
+```zsh
+sudo pacman -S firefox
+sudo pacman -S firefox-i18n-ja
+paru -S google-chrome
+```
+
+Downloads RictyDiminished-master.zip
+
+```zsh
+sudo pacman -S unzip
+sudo mkdir /usr/share/fonts/TTF
+cd /home/${USERNAME}/Downloads
+unzip RictyDiminished-master.zip
+cd ./RictyDiminished-master
+sudo cp *.ttf /usr/share/fonts/TTF
+fc-cache -vf
+```
+
+- xfce4-settings
+  - Appearance
+    - Fonts
+      - Default Font: Noto Sans CJK JP Regular, 18pt
+      - Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt
 
 ### 12. Console improvements
 
@@ -472,7 +546,40 @@ Setup Zsh
 
 ```zsh
 sudo pacman -S zsh
+zsh
 chsh -s $(which zsh)
+```
+
+```zsh
+paru -S prezto-git
+```
+
+```zsh
+nano ~/.zpreztorc
+
++++
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'autosuggestions' \ # Add
+  'git' \ # Add
+  'history-substring-search' \ # Add
+  'syntax-highlighting' \ # Add
+  'prompt'
++++
+# Auto set to 'off' on dumb terminals.
+zstyle ':prezto:module:prompt' theme 'pure' # sorin to pure
++++
+```
+
+```zsh
+source ~/.zpreztorc
 ```
 
 #### 12.5. Colored output
@@ -485,7 +592,7 @@ Uncommment line Color
 
 ## Localization/Japanese
 
-### 1. Fonts
+[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese "Localization/Japanese")
 
 ### 3. Input methods
 
@@ -513,28 +620,84 @@ Reboot
 reboot
 ```
 
-## Settings
-
-- Appearance
-  - Fonts
-    - Default Font: Noto Sans CJK JP Regular, 18pt
-    - Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt
 - FcitxConfiguration
   - Input Method
     - Add Mozc
-- Keyboard
-  - behavior
-    - Typing Settings > Repeat speed: 100
 
-## etc
+## Hyper
+
+- [Hyper](https://hyper.is "Hyper")
 
 ```zsh
-sudo paru -S google-chrome
-sudo pacman -S firefox
-sudo pacman -S firefox-i18n-ja
-sudo paru -S prezto-git
-sudo paru -S visual-studio-code-bin
+paru -S hyper
+```
+
+### 1. Preferences
+
+```zsh
++++
+module.exports = {
+  config: {
+    +++
+    // default font size in pixels for all tabs
+    fontSize: 18, # Change
+
+    // font family with optional fallbacks
+    fontFamily: 'Ricty Diminished', # Change
+    +++
+    +++
+    // rest of the config # Add
+    opacity: 0.80, # Add
+  },
+  +++
+  +++
+  plugins: [
+    "hyper-material-theme", # Add
+    "hyper-opacity", # Add
+  ],
+  +++
+};
+```
+
+## Visual Studio Code
+
+- [Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/ "Visual Studio Code")
+
+```zsh
+paru -S visual-studio-code-bin
+```
+
+### 1. Accounts
+
+- Setting Sync is On
+
+Installed Extensions
+
+- Docker
+- GitHub Theme
+- GlassIt-VSC
+- Jupyter
+- Jupyter Keymap
+- Jupyter Notebook Renderers
+- markdownlint
+- Marp for VS Code
+- Material Icon Theme
+- Path Intellisense
+- Prettier - Code formatter
+- Pylance
+- Python
+- Remote - Containers
+- Remote - SSH
+- Remote - WSL
+- Remote Development
+- Trailing Spaces
+- YAML
+
+## Docker
+
+- [Docker](https://www.docker.com "Docker")
+
+```zsh
 sudo pacman -S docker
 sudo systemctl enable docker
-sudo pacman -S git
 ```

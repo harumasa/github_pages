@@ -17,7 +17,7 @@
   <h1>How to install Arch Linux</h1>
   <div class="blog-post-subheader">
     August 29, 2020
-    (Lastmod: Aug 08 2022)
+    (Lastmod: Aug 09 2022)
   </div>
   <div class="blog-post-content">
     <h2 id="introduction">Introduction</h2>
@@ -34,7 +34,8 @@
 <p><a href="https://wiki.archlinux.org/title/Archinstall" title="archinstall">archinstall</a></p>
 </li>
 </ul>
-<p>archinstall is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a &ldquo;guided&rdquo; installer.</p>
+<p><a href="https://wiki.archlinux.org/title/Archinstall" title="archinstall">archinstall</a> is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a &ldquo;guided&rdquo; installer.
+<a href="https://wiki.archlinux.org/title/Installation_guide" title="Installation guide">Installation guide</a> 1.8. through 5. are automated.</p>
 <h3 id="1-pre-installation">1. Pre-installation</h3>
 <h4 id="11-acquire-an-installation-image">1.1 Acquire an installation image</h4>
 <ul>
@@ -62,8 +63,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># device list</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station ${DEVICENAME} scan</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station ${DEVICENAME} get-networks</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station ${DEVICENAME} connect SSID</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># exit</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station ${DEVICENAME} connect ${SSID}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># quit</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>ping archlinux.org
 </span></span></code></pre></div><h4 id="18-update-the-system-clock">1.8. Update the system clock</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>timedatectl set-ntp true
@@ -194,6 +195,9 @@
 <p>Setup NetworkManager</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nmtui
 </span></span></code></pre></div><h2 id="general-recommendations">General recommendations</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/general_recommendations" title="General recommendations">General recommendations</a></li>
+</ul>
 <h3 id="1-system-administration">1. System administration</h3>
 <h4 id="11-users-and-groups">1.1. Users and groups</h4>
 <p>Login with root account</p>
@@ -210,16 +214,18 @@
 <h4 id="21-pacman">2.1. pacman</h4>
 <p>Update all packages</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -Syu
-</span></span></code></pre></div><h4 id="25-arch-user-repository">2.5. Arch User Repository</h4>
-<p>Setup paru (AUR Helper)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S --needed base-devel
-</span></span><span style="display:flex;"><span>git clone https://aur.archlinux.org/paru.git
-</span></span><span style="display:flex;"><span>cd paru
-</span></span><span style="display:flex;"><span>makepkg -si
 </span></span></code></pre></div><p>Utilizing multiple cores on compression</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo nano /etc/makepkg.conf
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Change line COMPRESSXZ<span style="color:#f92672">=(</span>xz -c -z --threads<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> -<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Change line COMPRESSXZ<span style="color:#f92672">=(</span>xz -c -z - --threads<span style="color:#f92672">=</span>0<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h4 id="25-arch-user-repository">2.5. Arch User Repository</h4>
+<p>Setup paru (AUR Helper)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S --needed base-devel git
+</span></span><span style="display:flex;"><span>git clone https://aur.archlinux.org/paru.git
+</span></span><span style="display:flex;"><span>cd paru
+</span></span><span style="display:flex;"><span>makepkg -si
+</span></span><span style="display:flex;"><span>cd
+</span></span><span style="display:flex;"><span>rm -rf paru
 </span></span></code></pre></div><p>Update all packages</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru
 </span></span></code></pre></div><h3 id="4-graphical-user-interface">4. Graphical user interface</h3>
@@ -248,30 +254,34 @@
 <ul>
 <li>System
 <ul>
+<li>On battery
+<ul>
 <li>System power saving
 <ul>
-<li>system sleep mpde: Hibernate</li>
+<li>System sleep mode: Suspend</li>
 </ul>
 </li>
 <li>Laptop Lid
 <ul>
-<li>when laptop lid is closed: Hibernate</li>
+<li>when laptop lid is closed: Suspend</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Display
+<li>Plugged in
 <ul>
-<li>Display power management: off</li>
+<li>System power saving
+<ul>
+<li>System sleep mode: Suspend</li>
+</ul>
+</li>
+<li>Laptop Lid
+<ul>
+<li>when laptop lid is closed: Suspend</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>xfce4-screensaver
-<ul>
-<li>Screensaver
-<ul>
-<li>Enable Screensaver: off</li>
 </ul>
 </li>
 </ul>
@@ -284,28 +294,149 @@
 </span></span></code></pre></div><h3 id="7-networking">7. Networking</h3>
 <h4 id="73-setting-up-a-firewall">7.3. Setting up a firewall</h4>
 <p><a href="https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall" title="Uncomplicated Firewall">Uncomplicated Firewall</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S ufw
-</span></span><span style="display:flex;"><span>sudo systemctl enable ufw --now
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S ufw gufw
+</span></span><span style="display:flex;"><span>sudo systemctl enable ufw
 </span></span><span style="display:flex;"><span>sudo systemctl status ufw
 </span></span><span style="display:flex;"><span>sudo ufw enable
 </span></span><span style="display:flex;"><span>sudo ufw status
 </span></span></code></pre></div><h3 id="8-input-devices">8. Input Devices</h3>
+<h4 id="81-keyboard-layouts">8.1. Keyboard layouts</h4>
+<ul>
+<li>xfce4-settings
+<ul>
+<li>Keyboard
+<ul>
+<li>behavior
+<ul>
+<li>Typing Settings &gt; Repeat speed: 100</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="82-mouse-buttons">8.2. Mouse buttons</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S imwheel
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano ~/.imwheelrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;.*&#34;</span>
+</span></span><span style="display:flex;"><span>None, Up, Button4, <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>None, Down, Button5, <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>imwheel -k
+</span></span></code></pre></div><ul>
+<li>xfce4-session
+<ul>
+<li>Application Autostart
+<ul>
+<li>Add application
+<ul>
+<li>Name: imwheel</li>
+<li>Command: /usr/bin/imwheel</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h4 id="83-laptop-touchpads">8.3. Laptop touchpads</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S xf86-input-libinput
-</span></span></code></pre></div><h3 id="11-appearance">11. Appearance</h3>
+</span></span></code></pre></div><ul>
+<li>xfce4-settings
+<ul>
+<li>Mouse and Touchpad
+<ul>
+<li>Devices
+<ul>
+<li>Devices: DELL Touchpad
+<ul>
+<li>Buttons and Feedback
+<ul>
+<li>Buttons: Reverse scroll direction: on</li>
+</ul>
+</li>
+<li>Touchpad
+<ul>
+<li>General: Tap touchpad to click: on</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="11-appearance">11. Appearance</h3>
 <h4 id="111-fonts">11.1. Fonts</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S noto-fonts-cjk
-</span></span></code></pre></div><h3 id="12-console-improvements">12. Console improvements</h3>
+<p><a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S noto-fonts<span style="color:#f92672">{</span>,-cjk,-emoji,-extra<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><a href="https://github.com/edihbrandon/RictyDiminished" title="Ricty Diminished">Ricty Diminished</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S firefox
+</span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja
+</span></span><span style="display:flex;"><span>paru -S google-chrome
+</span></span></code></pre></div><p>Downloads RictyDiminished-master.zip</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S unzip
+</span></span><span style="display:flex;"><span>sudo mkdir /usr/share/fonts/TTF
+</span></span><span style="display:flex;"><span>cd /home/<span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span>/Downloads
+</span></span><span style="display:flex;"><span>unzip RictyDiminished-master.zip
+</span></span><span style="display:flex;"><span>cd ./RictyDiminished-master
+</span></span><span style="display:flex;"><span>sudo cp *.ttf /usr/share/fonts/TTF
+</span></span><span style="display:flex;"><span>fc-cache -vf
+</span></span></code></pre></div><ul>
+<li>xfce4-settings
+<ul>
+<li>Appearance
+<ul>
+<li>Fonts
+<ul>
+<li>Default Font: Noto Sans CJK JP Regular, 18pt</li>
+<li>Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-console-improvements">12. Console improvements</h3>
 <h4 id="123-alternative-shells">12.3. Alternative shells</h4>
 <p>Setup Zsh</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S zsh
+</span></span><span style="display:flex;"><span>zsh
 </span></span><span style="display:flex;"><span>chsh -s <span style="color:#66d9ef">$(</span>which zsh<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S prezto-git
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano ~/.zpreztorc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>zstyle <span style="color:#e6db74">&#39;:prezto:load&#39;</span> pmodule <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;environment&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;terminal&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;editor&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;history&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;directory&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;spectrum&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;utility&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;completion&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  <span style="color:#e6db74">&#39;autosuggestions&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;git&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;history-substring-search&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;syntax-highlighting&#39;</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;prompt&#39;</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Auto set to &#39;off&#39; on dumb terminals.</span>
+</span></span><span style="display:flex;"><span>zstyle <span style="color:#e6db74">&#39;:prezto:module:prompt&#39;</span> theme <span style="color:#e6db74">&#39;pure&#39;</span> <span style="color:#75715e"># sorin to pure</span>
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>source ~/.zpreztorc
 </span></span></code></pre></div><h4 id="125-colored-output">12.5. Colored output</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo nano /etc/pacman.conf
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Uncommment line Color
 </span></span></code></pre></div><h2 id="localizationjapanese">Localization/Japanese</h2>
-<h3 id="1-fonts">1. Fonts</h3>
+<p><a href="https://wiki.archlinux.org/title/Localization/Japanese" title="Localization/Japanese">Localization/Japanese</a></p>
 <h3 id="3-input-methods">3. Input methods</h3>
 <h4 id="33-mozc">3.3. Mozc</h4>
 <p>Setup Mozc and Fcitx</p>
@@ -318,18 +449,7 @@
 </span></span><span style="display:flex;"><span>export XMODIFIERS<span style="color:#f92672">=</span>@im<span style="color:#f92672">=</span>fcitx
 </span></span></code></pre></div><p>Reboot</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>reboot
-</span></span></code></pre></div><h2 id="settings">Settings</h2>
-<ul>
-<li>Appearance
-<ul>
-<li>Fonts
-<ul>
-<li>Default Font: Noto Sans CJK JP Regular, 18pt</li>
-<li>Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt</li>
-</ul>
-</li>
-</ul>
-</li>
+</span></span></code></pre></div><ul>
 <li>FcitxConfiguration
 <ul>
 <li>Input Method
@@ -339,25 +459,72 @@
 </li>
 </ul>
 </li>
-<li>Keyboard
+</ul>
+<h2 id="hyper">Hyper</h2>
 <ul>
-<li>behavior
+<li><a href="https://hyper.is" title="Hyper">Hyper</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S hyper
+</span></span></code></pre></div><h3 id="1-preferences">1. Preferences</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>module.exports <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  config: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    +++
+</span></span><span style="display:flex;"><span>    // default font size in pixels <span style="color:#66d9ef">for</span> all tabs
+</span></span><span style="display:flex;"><span>    fontSize: 18, <span style="color:#75715e"># Change</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    // font family with optional fallbacks
+</span></span><span style="display:flex;"><span>    fontFamily: <span style="color:#e6db74">&#39;Ricty Diminished&#39;</span>, <span style="color:#75715e"># Change</span>
+</span></span><span style="display:flex;"><span>    +++
+</span></span><span style="display:flex;"><span>    +++
+</span></span><span style="display:flex;"><span>    // rest of the config <span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>    opacity: 0.80, <span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>  +++
+</span></span><span style="display:flex;"><span>  +++
+</span></span><span style="display:flex;"><span>  plugins: <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;hyper-material-theme&#34;</span>, <span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;hyper-opacity&#34;</span>, <span style="color:#75715e"># Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">]</span>,
+</span></span><span style="display:flex;"><span>  +++
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>;
+</span></span></code></pre></div><h2 id="visual-studio-code">Visual Studio Code</h2>
 <ul>
-<li>Typing Settings &gt; Repeat speed: 100</li>
+<li><a href="https://azure.microsoft.com/en-us/products/visual-studio-code/" title="Visual Studio Code">Visual Studio Code</a></li>
 </ul>
-</li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S visual-studio-code-bin
+</span></span></code></pre></div><h3 id="1-accounts">1. Accounts</h3>
+<ul>
+<li>Setting Sync is On</li>
 </ul>
-</li>
+<p>Installed Extensions</p>
+<ul>
+<li>Docker</li>
+<li>GitHub Theme</li>
+<li>GlassIt-VSC</li>
+<li>Jupyter</li>
+<li>Jupyter Keymap</li>
+<li>Jupyter Notebook Renderers</li>
+<li>markdownlint</li>
+<li>Marp for VS Code</li>
+<li>Material Icon Theme</li>
+<li>Path Intellisense</li>
+<li>Prettier - Code formatter</li>
+<li>Pylance</li>
+<li>Python</li>
+<li>Remote - Containers</li>
+<li>Remote - SSH</li>
+<li>Remote - WSL</li>
+<li>Remote Development</li>
+<li>Trailing Spaces</li>
+<li>YAML</li>
 </ul>
-<h2 id="etc">etc</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo paru -S google-chrome
-</span></span><span style="display:flex;"><span>sudo pacman -S firefox
-</span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja
-</span></span><span style="display:flex;"><span>sudo paru -S prezto-git
-</span></span><span style="display:flex;"><span>sudo paru -S visual-studio-code-bin
-</span></span><span style="display:flex;"><span>sudo pacman -S docker
+<h2 id="docker">Docker</h2>
+<ul>
+<li><a href="https://www.docker.com" title="Docker">Docker</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S docker
 </span></span><span style="display:flex;"><span>sudo systemctl enable docker
-</span></span><span style="display:flex;"><span>sudo pacman -S git
 </span></span></code></pre></div>
   </div>
 </section>

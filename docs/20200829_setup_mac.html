@@ -17,7 +17,7 @@
   <h1>How to setup macOS Monterey (Hyper, Visual Studio Code, Docker, Git)</h1>
   <div class="blog-post-subheader">
     August 29, 2020
-    (Lastmod: Aug 09 2022)
+    (Lastmod: Aug 10 2022)
   </div>
   <div class="blog-post-content">
     <h2 id="introduction">Introduction</h2>
@@ -389,6 +389,7 @@
 </span></span><span style="display:flex;"><span>    command: jupyter notebook --allow-root --ip<span style="color:#f92672">=</span>0.0.0.0 --no-browser
 </span></span><span style="display:flex;"><span>    ports:
 </span></span><span style="display:flex;"><span>      - 8888:8888
+</span></span><span style="display:flex;"><span>    tty: true
 </span></span><span style="display:flex;"><span>    volumes:
 </span></span><span style="display:flex;"><span>      - ./notebook:/dev/work
 </span></span><span style="display:flex;"><span>    working_dir: /dev/work

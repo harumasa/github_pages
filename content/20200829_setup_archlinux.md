@@ -714,6 +714,7 @@ Installed Extensions
 ```zsh
 sudo pacman -S docker
 sudo systemctl enable docker
+sudo pacman -S docker-compose
 ```
 
 ## ETC

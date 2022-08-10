@@ -497,6 +497,7 @@ Run IMWheel on startup using a service
     - Add application
       - Name: imwheel
       - Command: /usr/bin/imwheel
+      - Trigger: on login
 
 #### 8.3. Laptop touchpads
 
@@ -556,7 +557,14 @@ chsh -s $(which zsh)
 Setup Prezto
 
 ```zsh
-paru -S prezto-git
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+```
+
+```zsh
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 ```
 
 ```zsh
@@ -572,9 +580,9 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'history-substring-search' \
   'autosuggestions' \ # Add
   'git' \ # Add
-  'history-substring-search' \ # Add
   'syntax-highlighting' \ # Add
   'prompt'
 +++
@@ -606,17 +614,17 @@ Uncommment line Color
 Setup Mozc and Fcitx
 
 ```zsh
-sudo pacman -S fcitx fcitx-mozc fcitx-im fcitx-configtool
+sudo pacman -S fcitx5-im fcitx5-mozc
 ```
 
 Set environment variables for IM modules
 
 ```zsh
-nano ~/.xprofile
+sudo nano /etc/environment
 
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
 ```
 
 Reboot
@@ -625,7 +633,7 @@ Reboot
 reboot
 ```
 
-- FcitxConfiguration
+- Fcitx 5 Configuration
   - Input Method
     - Add Mozc
 
@@ -670,6 +678,7 @@ module.exports = {
 
 ```zsh
 paru -S visual-studio-code-bin
+sudo pacman -S gnomekeyring
 ```
 
 ### 1. Accounts

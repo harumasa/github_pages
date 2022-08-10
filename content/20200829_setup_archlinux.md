@@ -666,7 +666,7 @@ module.exports = {
   +++
   plugins: [
     "hyper-material-theme", # Add
-    "hyper-opacity", # Add
+    "hyper-opacity", # Add (Only works on Windows and macOS)
   ],
   +++
 };

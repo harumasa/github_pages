@@ -9,10 +9,10 @@
     <copyright>harumasa All rights reserved.</copyright><atom:link href="https://harumasa.github.io/github_pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to setup WSL 2 (Windows Subsystem for Linux 2) on Windows 11 (PowerShell 7, Windows Terminal, Visual Studio Code, Docker)</title>
-      <link>https://harumasa.github.io/github_pages/20220716_install_wsl_2.html</link>
+      <link>https://harumasa.github.io/github_pages/20220716_setup_wsl_2.html</link>
       <pubDate>Sat, 16 Jul 2022 00:00:00 +0900</pubDate>
       
-      <guid>https://harumasa.github.io/github_pages/20220716_install_wsl_2.html</guid>
+      <guid>https://harumasa.github.io/github_pages/20220716_setup_wsl_2.html</guid>
       <description>Introduction Model: DELL Inspiron 14 (5485) OS: Windows 11 PowerShell 7 Windows Terminal Visual Studio Code WSL 2 Docker PowerShell 7 PowerShell Documentation
 Windows Terminal What is Windows Terminal?
 1. Settings 1.1. Startup Default profile: PowerShell (PowerShell 7) Default terminal application: Windows Terminal Append to JSON file.
@@ -22,19 +22,19 @@ Ricty Diminished
     
     <item>
       <title>Create a static website with Hugo and Host it with Github Pages</title>
-      <link>https://harumasa.github.io/github_pages/20200829_setup_for_github_pages.html</link>
+      <link>https://harumasa.github.io/github_pages/20200829_setup_github_pages.html</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
       
-      <guid>https://harumasa.github.io/github_pages/20200829_setup_for_github_pages.html</guid>
+      <guid>https://harumasa.github.io/github_pages/20200829_setup_github_pages.html</guid>
       <description>Introduction Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Hugo Setup Hugo 1. Install Hugo brew install hugo 2. Create a New Site hugo new site github_pages 3. Add a Theme cd ~/github_pages git init git submodule add https://github.com/alex-shpak/elephants.git themes/elephants echo theme = \&amp;#34;elephants\&amp;#34; &amp;gt;&amp;gt; config.toml 4. Add Some Content cd ~/github_pages/content hugo new github_pages_01.md vim ~/github_pages/content/github_pages_01.md --- title: &amp;#34;TITLE&amp;#34; date: 2022-01-01T00:00:00+09:00 lastmod: 2022-01-01T00:00:00+09:00 draft: false --- ## XXXXXXXX +++ 5.</description>
     </item>
     
     <item>
       <title>How to setup Arch Linux (Hyper, Visual Studio Code, Docker)</title>
-      <link>https://harumasa.github.io/github_pages/20200829_install_archlinux.html</link>
+      <link>https://harumasa.github.io/github_pages/20200829_setup_archlinux.html</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
       
-      <guid>https://harumasa.github.io/github_pages/20200829_install_archlinux.html</guid>
+      <guid>https://harumasa.github.io/github_pages/20200829_setup_archlinux.html</guid>
       <description>Introduction Model: DELL Inspiron 14 (5485) OS: Arch Linux Hyper Visual Studio Code Docker Installation guide Installation guide
 archinstall
 archinstall is a helper library to install Arch Linux. It is packaged with different pre-configured installers, such as a &amp;ldquo;guided&amp;rdquo; installer. Installation guide 1.8. through 5. are automated.
@@ -43,10 +43,10 @@ archinstall is a helper library to install Arch Linux. It is packaged with diffe
     
     <item>
       <title>How to setup macOS Monterey (Hyper, Visual Studio Code, Docker, Git)</title>
-      <link>https://harumasa.github.io/github_pages/20200829_setup_for_mac.html</link>
+      <link>https://harumasa.github.io/github_pages/20200829_setup_mac.html</link>
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0900</pubDate>
       
-      <guid>https://harumasa.github.io/github_pages/20200829_setup_for_mac.html</guid>
+      <guid>https://harumasa.github.io/github_pages/20200829_setup_mac.html</guid>
       <description>Introduction Model: MacBook Pro (13-inch, 2016, Four Thunderbolt 3 Ports) OS: macOS Monterey Hyper Visual Studio Code Docker Git BetterSnapTool macOS Monterey 1. System Preferences 1.1. General Click in the scroll bar to: Jump to the spot that&amp;rsquo;s clicked Prefer tabs: Turn on Ask to keep changes when closing documents 1.2. Desktop &amp;amp; Screen Saver 1.2.2. Screen Saver Turn off Show screen saver after 1.3. Dock &amp;amp; Menue Bar 1.3.1. Dock &amp;amp; Menue Bar Minimize windows using: Scale effect Turn on Double-click a window&amp;rsquo;s title bar to: minimize Turn on Minimize windows into application icon Turn on Automatically hide and show the Dock 1.</description>
     </item>
     

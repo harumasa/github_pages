@@ -17,7 +17,7 @@
   <h1>How to setup Arch Linux (Hyper, Visual Studio Code, Docker)</h1>
   <div class="blog-post-subheader">
     August 29, 2020
-    (Lastmod: Aug 09 2022)
+    (Lastmod: Aug 10 2022)
   </div>
   <div class="blog-post-content">
     <h2 id="introduction">Introduction</h2>
@@ -296,7 +296,9 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S pipewire
 </span></span></code></pre></div><h3 id="7-networking">7. Networking</h3>
 <h4 id="73-setting-up-a-firewall">7.3. Setting up a firewall</h4>
-<p><a href="https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall" title="Uncomplicated Firewall">Uncomplicated Firewall</a></p>
+<ul>
+<li><a href="https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall" title="Uncomplicated Firewall">Uncomplicated Firewall</a></li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S ufw gufw
 </span></span><span style="display:flex;"><span>sudo systemctl enable ufw
 </span></span><span style="display:flex;"><span>sudo systemctl status ufw
@@ -320,14 +322,18 @@
 </li>
 </ul>
 <h4 id="82-mouse-buttons">8.2. Mouse buttons</h4>
+<p>Install IMWheel</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S imwheel
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano ~/.imwheelrc
+</span></span></code></pre></div><p>Setup IMWheel</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano ~/.imwheelrc
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;.*&#34;</span>
 </span></span><span style="display:flex;"><span>None, Up, Button4, <span style="color:#ae81ff">3</span>
 </span></span><span style="display:flex;"><span>None, Down, Button5, <span style="color:#ae81ff">2</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>imwheel -k
-</span></span></code></pre></div><ul>
+</span></span></code></pre></div><p>Run IMWheel</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>imwheel
+</span></span></code></pre></div><p>Run IMWheel on startup using a service</p>
+<ul>
 <li>xfce4-session
 <ul>
 <li>Application Autostart
@@ -375,22 +381,13 @@
 </ul>
 <h3 id="11-appearance">11. Appearance</h3>
 <h4 id="111-fonts">11.1. Fonts</h4>
-<p><a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a></p>
+<ul>
+<li><a href="https://fonts.google.com" title="Google Fonts">Google Fonts</a></li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S noto-fonts<span style="color:#f92672">{</span>,-cjk,-emoji,-extra<span style="color:#f92672">}</span>
-</span></span></code></pre></div><p><a href="https://github.com/edihbrandon/RictyDiminished" title="Ricty Diminished">Ricty Diminished</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S firefox
-</span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja
-</span></span><span style="display:flex;"><span>paru -S google-chrome
-</span></span></code></pre></div><p>Downloads RictyDiminished-master.zip</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S unzip
-</span></span><span style="display:flex;"><span>sudo mkdir /usr/share/fonts/TTF
-</span></span><span style="display:flex;"><span>cd /home/<span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span>/Downloads
-</span></span><span style="display:flex;"><span>unzip RictyDiminished-master.zip
-</span></span><span style="display:flex;"><span>cd ./RictyDiminished-master
-</span></span><span style="display:flex;"><span>sudo cp *.ttf /usr/share/fonts/TTF
-</span></span><span style="display:flex;"><span>fc-cache -vf
 </span></span></code></pre></div><ul>
-<li>xfce4-settings
+<li>
+<p>xfce4-settings</p>
 <ul>
 <li>Appearance
 <ul>
@@ -404,14 +401,25 @@
 </li>
 </ul>
 </li>
+<li>
+<p><a href="https://github.com/edihbrandon/RictyDiminished" title="Ricty Diminished">Ricty Diminished</a></p>
+</li>
 </ul>
-<h3 id="12-console-improvements">12. Console improvements</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo mkdir -p /usr/share/fonts/TTF
+</span></span><span style="display:flex;"><span>git clone https://github.com/edihbrandon/RictyDiminished.git
+</span></span><span style="display:flex;"><span>cd RictyDiminished
+</span></span><span style="display:flex;"><span>sudo cp *.ttf /usr/share/fonts/TTF
+</span></span><span style="display:flex;"><span>fc-cache -vf
+</span></span><span style="display:flex;"><span>cd
+</span></span><span style="display:flex;"><span>rm -rf RictyDiminished
+</span></span></code></pre></div><h3 id="12-console-improvements">12. Console improvements</h3>
 <h4 id="123-alternative-shells">12.3. Alternative shells</h4>
 <p>Setup Zsh</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S zsh
 </span></span><span style="display:flex;"><span>zsh
 </span></span><span style="display:flex;"><span>chsh -s <span style="color:#66d9ef">$(</span>which zsh<span style="color:#66d9ef">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S prezto-git
+</span></span></code></pre></div><p>Setup Prezto</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>paru -S prezto-git
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>nano ~/.zpreztorc
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>+++
@@ -439,7 +447,9 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Uncommment line Color
 </span></span></code></pre></div><h2 id="localizationjapanese">Localization/Japanese</h2>
-<p><a href="https://wiki.archlinux.org/title/Localization/Japanese" title="Localization/Japanese">Localization/Japanese</a></p>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/Localization/Japanese" title="Localization/Japanese">Localization/Japanese</a></li>
+</ul>
 <h3 id="3-input-methods">3. Input methods</h3>
 <h4 id="33-mozc">3.3. Mozc</h4>
 <p>Setup Mozc and Fcitx</p>
@@ -528,6 +538,10 @@
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S docker
 </span></span><span style="display:flex;"><span>sudo systemctl enable docker
+</span></span></code></pre></div><h2 id="etc">ETC</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S firefox
+</span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja
+</span></span><span style="display:flex;"><span>paru -S google-chrome
 </span></span></code></pre></div>
   </div>
 </section>

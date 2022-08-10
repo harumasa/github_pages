@@ -1,7 +1,7 @@
 ---
 title: "How to setup Arch Linux (Hyper, Visual Studio Code, Docker)"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2022-08-09T00:00:00+09:00
+lastmod: 2022-08-10T00:00:00+09:00
 draft: false
 ---
 
@@ -447,7 +447,7 @@ sudo pacman -S pipewire
 
 #### 7.3. Setting up a firewall
 
-[Uncomplicated Firewall](https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall "Uncomplicated Firewall")
+- [Uncomplicated Firewall](https://wiki.archlinux.jp/index.php/Uncomplicated_Firewall "Uncomplicated Firewall")
 
 ```zsh
 sudo pacman -S ufw gufw
@@ -468,9 +468,13 @@ sudo ufw status
 
 #### 8.2. Mouse buttons
 
+Install IMWheel
+
 ```zsh
 paru -S imwheel
 ```
+
+Setup IMWheel
 
 ```zsh
 nano ~/.imwheelrc
@@ -480,9 +484,13 @@ None, Up, Button4, 3
 None, Down, Button5, 2
 ```
 
+Run IMWheel
+
 ```zsh
-imwheel -k
+imwheel
 ```
+
+Run IMWheel on startup using a service
 
 - xfce4-session
   - Application Autostart
@@ -509,30 +517,10 @@ sudo pacman -S xf86-input-libinput
 
 #### 11.1. Fonts
 
-[Google Fonts](https://fonts.google.com "Google Fonts")
+- [Google Fonts](https://fonts.google.com "Google Fonts")
 
 ```zsh
 sudo pacman -S noto-fonts{,-cjk,-emoji,-extra}
-```
-
-[Ricty Diminished](https://github.com/edihbrandon/RictyDiminished "Ricty Diminished")
-
-```zsh
-sudo pacman -S firefox
-sudo pacman -S firefox-i18n-ja
-paru -S google-chrome
-```
-
-Downloads RictyDiminished-master.zip
-
-```zsh
-sudo pacman -S unzip
-sudo mkdir /usr/share/fonts/TTF
-cd /home/${USERNAME}/Downloads
-unzip RictyDiminished-master.zip
-cd ./RictyDiminished-master
-sudo cp *.ttf /usr/share/fonts/TTF
-fc-cache -vf
 ```
 
 - xfce4-settings
@@ -540,6 +528,18 @@ fc-cache -vf
     - Fonts
       - Default Font: Noto Sans CJK JP Regular, 18pt
       - Default Monospace Font: Noto Sans Mono CJK JP Regular, 18pt
+
+- [Ricty Diminished](https://github.com/edihbrandon/RictyDiminished "Ricty Diminished")
+
+```zsh
+sudo mkdir -p /usr/share/fonts/TTF
+git clone https://github.com/edihbrandon/RictyDiminished.git
+cd RictyDiminished
+sudo cp *.ttf /usr/share/fonts/TTF
+fc-cache -vf
+cd
+rm -rf RictyDiminished
+```
 
 ### 12. Console improvements
 
@@ -552,6 +552,8 @@ sudo pacman -S zsh
 zsh
 chsh -s $(which zsh)
 ```
+
+Setup Prezto
 
 ```zsh
 paru -S prezto-git
@@ -595,7 +597,7 @@ Uncommment line Color
 
 ## Localization/Japanese
 
-[Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese "Localization/Japanese")
+- [Localization/Japanese](https://wiki.archlinux.org/title/Localization/Japanese "Localization/Japanese")
 
 ### 3. Input methods
 
@@ -703,4 +705,12 @@ Installed Extensions
 ```zsh
 sudo pacman -S docker
 sudo systemctl enable docker
+```
+
+## ETC
+
+```zsh
+sudo pacman -S firefox
+sudo pacman -S firefox-i18n-ja
+paru -S google-chrome
 ```

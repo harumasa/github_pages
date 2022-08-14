@@ -17,7 +17,7 @@
   <h1>How to setup Arch Linux (Hyper, Visual Studio Code, Docker)</h1>
   <div class="blog-post-subheader">
     August 29, 2020
-    (Lastmod: Aug 10 2022)
+    (Lastmod: Aug 15 2022)
   </div>
   <div class="blog-post-content">
     <h2 id="introduction">Introduction</h2>
@@ -545,6 +545,16 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S docker
 </span></span><span style="display:flex;"><span>sudo systemctl enable docker
 </span></span><span style="display:flex;"><span>sudo pacman -S docker-compose
+</span></span></code></pre></div><h2 id="clamav">ClamAv</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S clamav
+</span></span><span style="display:flex;"><span>sudo freshclam
+</span></span><span style="display:flex;"><span>sudo systemctl enable clamav-freshclam.service
+</span></span><span style="display:flex;"><span>sudo systemctl start clamav-freshclam.service
+</span></span><span style="display:flex;"><span>sudo systemctl status clamav-freshclam.service
+</span></span><span style="display:flex;"><span>sudo systemctl enable clamav-daemon.service
+</span></span><span style="display:flex;"><span>sudo systemctl start clamav-daemon.service
+</span></span><span style="display:flex;"><span>sudo systemctl status clamav-daemon.service
+</span></span><span style="display:flex;"><span>curl https://www.eicar.org/download/eicar.com.txt | clamscan -
 </span></span></code></pre></div><h2 id="etc">ETC</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>sudo pacman -S firefox
 </span></span><span style="display:flex;"><span>sudo pacman -S firefox-i18n-ja

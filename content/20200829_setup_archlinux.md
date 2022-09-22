@@ -1,7 +1,7 @@
 ---
 title: "How to setup Arch Linux (Hyper, Visual Studio Code, Docker)"
 date: 2020-08-29T00:00:00+09:00
-lastmod: 2022-08-15T00:00:00+09:00
+lastmod: 2022-09-23T00:00:00+09:00
 draft: false
 ---
 
@@ -324,8 +324,8 @@ To allow members of group wheel sudo access
 ```zsh
 EDITOR=nano visudo
 
-Uncommment line %wheel ALL=(ALL) ALL
-Uncommment line %wheel ALL=(ALL) NOPASSWD: ALL
+Uncommment line %wheel ALL=(ALL:ALL) ALL
+Uncommment line %wheel ALL=(ALL:ALL) NOPASSWD: ALL
 ```
 
 Return to regular user
@@ -678,7 +678,7 @@ module.exports = {
 
 ```zsh
 paru -S visual-studio-code-bin
-sudo pacman -S gnomekeyring
+sudo pacman -S gnome-keyring
 ```
 
 ### 1. Accounts
